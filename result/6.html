@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6. Контакты</title>  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/select2.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/main.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+        
+    <main class="main">
+      
+      <section class="contacts">
+  <div class="contain">
+    <div class="contacts__inner">
+
+      <div class="contacts__left">
+        <div class="contacts__title">Свяжитесь с нами</div>
+        <div class="contacts__text">Мы готовы ответить на ваши вопросы, обсудить проект и предложить оптимальные решение. Выберите удобный способ связи или заполните форму.</div>
+
+        <div class="contacts__list">
+          <div class="contacts__card">
+            <span class="contacts__card-icon" aria-hidden="true"></span>
+            <span class="contacts__card-info">
+              <span class="contacts__card-label">Адрес офиса</span>
+              <span class="contacts__card-value">170006 г. Тверь, ул. В. Бонч-Бруевича, д. 16 оф. 11</span>
+            </span>
+          </div>
+          <div class="contacts__card">
+            <span class="contacts__card-icon" aria-hidden="true"></span>
+            <span class="contacts__card-info">
+              <span class="contacts__card-label">Телефон</span>
+              <span class="contacts__card-value">8 (4822) 32-20-10</span>
+              <span class="contacts__card-note">Звонки принимаются в рабочее время</span>
+            </span>
+          </div>
+          <div class="contacts__card">
+            <span class="contacts__card-icon" aria-hidden="true"></span>
+            <span class="contacts__card-info">
+              <span class="contacts__card-label">Электронная почта</span>
+              <span class="contacts__card-value">smartst69@mail.ru</span>
+              <span class="contacts__card-note">Отвечаем в течение рабочего дня</span>
+            </span>
+          </div>
+          <div class="contacts__card">
+            <span class="contacts__card-icon" aria-hidden="true"></span>
+            <span class="contacts__card-info">
+              <span class="contacts__card-label">Режим работы</span>
+              <span class="contacts__card-value">Пн–Пт: 10:00 – 18:00</span>
+              <span class="contacts__card-note">Суббота и воскресенье — выходные</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="contacts__actions">
+          <a class="contacts__btn" href="#">Реквизиты</a>
+          <a class="contacts__btn" href="#"><span class="contacts__btn-icon contacts__btn-icon--google" aria-hidden="true"></span>Оставить отзыв</a>
+          <a class="contacts__btn" href="#"><span class="contacts__btn-icon contacts__btn-icon--yandex" aria-hidden="true"></span>Оставить отзыв</a>
+        </div>
+      </div>
+
+      <div class="contacts__panel">
+        <div class="contacts__panel-title">Напишите нам</div>
+        <div class="contacts__panel-text">Оставьте заявку, и мы свяжемся с вами в ближайшее время</div>
+
+        <form class="contacts__form">
+          <label class="contacts__field">
+            <span class="contacts__field-label">Ваше имя *</span>
+            <input class="contacts__input" type="text" name="name" placeholder="Иванов Иван">
+          </label>
+          <label class="contacts__field">
+            <span class="contacts__field-label">Телефон *</span>
+            <input class="contacts__input" type="tel" name="phone" placeholder="+7 (900) 000-00-00">
+          </label>
+          <label class="contacts__field">
+            <span class="contacts__field-label">Тема обращения</span>
+            <input class="contacts__input" type="text" name="subject" placeholder="Строительство производственного цеха">
+          </label>
+          <label class="contacts__field">
+            <span class="contacts__field-label">Сообщение</span>
+            <textarea class="contacts__textarea" name="message" placeholder="Опишите ваш проект или задайте вопрос ..."></textarea>
+          </label>
+
+          <label class="contacts__agree">
+            <input class="contacts__checkbox" type="checkbox" checked>
+            <span class="contacts__checkbox-box" aria-hidden="true"></span>
+            <span class="contacts__agree-text">Я согласен на обработку персональных данных и принимаю условия политики конфиденциальности</span>
+          </label>
+
+          <button class="contacts__submit" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">  
+  
+</footer>    
+  </div>
+<!--wrapper-->
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<e28ccc70-b9f5-4f7b-aec4-03bab1133076>" type="text/javascript"></script>
+  <script async src="js/placemark.js"></script>   -->  
+  <script src="js/select2.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
+

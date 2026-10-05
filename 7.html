@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7. Новости</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">      
+      <section class="section">
+        <div class="contain">
+          <div class="news-cards">
+            <div class="news-card">
+              <img class="news-card__img" src="img/news-montazh-metallokonstrukcij.jpg" alt="">
+
+              <div class="news-card__body">
+                <span class="news-card__date">10 мая 2025</span>
+                <h3 class="news-card__title">Фотоотчет: монтаж металлоконструкций на объекте</h3>
+                <p class="news-card__text">На производственно-окрасочном корпусе завершён монтаж металлоконструкций каркаса. Приступаем к устройству ограждающих конструкций.</p>
+                <a class="news-card__link" href="#">
+                  Смотреть фото
+                  <span class="news-card__link-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 12" fill="none"><path d="M1 6h17M13 1l5 5-5 5" stroke="#52bbb5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+    </main>
+    @@include('var/_footer.html')    
+  </div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+

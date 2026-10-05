@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8. Портфолио</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+      <div class="head__banner">
+        <div class="contain">
+          <nav class="head__crumbs" aria-label="Хлебные крошки">
+            <a class="head__crumbs-link" href="">Главная</a>      
+            <a class="head__crumbs-link" href="">Портфолио</a>            
+            <span class="head__crumbs-current">ТРЦ «Рубин-2»</span>
+          </nav>
+          <h1 class="head__title">Торгово-развлекательный центр «Рубин-2»</h1>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="contain">
+          <div class="project-cards">
+            @@include('var/_project-card.html',{
+              "img":"img/project-tc-1.jpg",
+              "title":"Реконструкция промышленного здания под современный торговый центр.",
+              "txt":"Строительство здания Управляющей компании «КСК» и сопутствующей инфраструктуры. Проект включал возведение административного корпуса и благоустройство территории."
+            })
+            @@include('var/_project-card.html',{
+              "img":"img/project-tc-2.jpg",
+              "title":"Фитнес-клуб «F3 Формула»",
+              "txt":"Строительство здания с тренажёрными залами, бассейном и SPA-зоной. Объект оснащён современными системами вентиляции, кондиционирования и водоподготовки."
+            })
+            @@include('var/_project-card.html',{
+              "img":"img/project-tc-3.jpg",
+              "title":"Промтехнопарк «КСК»",
+              "txt":"Строительство здания  Управляющей компании «КСК» и сопутствующей инфраструктуры. Проект  включал возведение административного корпуса и благоустройство  территории."
+            })
+            @@include('var/_project-card.html',{
+              "img":"img/project-tc-4.jpg",
+              "title":"Торговый комплекс ОАО «Универсал»",
+              "txt":"Строительство объекта вдоль федеральной трассы М-10. Торговый комплекс с парковкой и  подъездными путями. Проект реализован с опережением графика."
+            })
+            @@include('var/_project-card.html',{
+              "img":"img/project-tc-5.jpg",
+              "title":"Производственно-окрасочный корпус",
+              "txt":"Возведение  производственно-окрасочного корпуса на земельном участке в Твери. Проект включал забивку свай, монтаж металлоконструкций и устройство систем  вентиляции для окрасочных камер."
+            })
+            @@include('var/_project-card.html',{
+              "img":"img/project-tc-6.jpg",
+              "title":"Автосалоны «МАЗДА», «ЛЕКСУС», «ХЁНДЭ»",
+              "txt":"Ремонтные работы  автосалонов трёх автомобильных брендов: «МАЗДА», «ЛЕКСУС», «ХЁНДЭ».  Проект включал отделочные работы, модернизацию инженерных систем и  адаптацию помещений под стандарты автопроизводителей."
+            })
+            
+          </div>
+        </div>
+      </section>
+
+    </main>
+    @@include('var/_footer.html')    
+  </div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+
