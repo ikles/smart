@@ -21,16 +21,17 @@
     <main class="main">
       <div class="head__banner">
         <div class="contain">
-          <nav class="head__crumbs" aria-label="Хлебные крошки">
-            <a class="head__crumbs-link" href="">Главная</a>      
-            <a class="head__crumbs-link" href="">Портфолио</a>            
-            <span class="head__crumbs-current">ТРЦ «Рубин-2»</span>
+          <nav class="bread" aria-label="Хлебные крошки">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li>Портфолио</li>
+            </ul>            
           </nav>
-          <h1 class="head__title">Торгово-развлекательный центр «Рубин-2»</h1>
+          <h1 class="head__title">Портфолио</h1>
         </div>
       </div>
 
-      <section class="section">
+      <section class="s-project-cards">
         <div class="contain">
           <div class="project-cards">
             @@include('var/_project-card.html',{
@@ -62,12 +63,11 @@
               "img":"img/project-tc-6.jpg",
               "title":"Автосалоны «МАЗДА», «ЛЕКСУС», «ХЁНДЭ»",
               "txt":"Ремонтные работы  автосалонов трёх автомобильных брендов: «МАЗДА», «ЛЕКСУС», «ХЁНДЭ».  Проект включал отделочные работы, модернизацию инженерных систем и  адаптацию помещений под стандарты автопроизводителей."
-            })
-            
+            })          
           </div>
         </div>
       </section>
-
+      @@include('var/_s-site-cta.html')
     </main>
     @@include('var/_footer.html')    
   </div>

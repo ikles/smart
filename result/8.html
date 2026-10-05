@@ -28,21 +28,22 @@
     <main class="main">
       <div class="head__banner">
         <div class="contain">
-          <nav class="head__crumbs" aria-label="Хлебные крошки">
-            <a class="head__crumbs-link" href="">Главная</a>      
-            <a class="head__crumbs-link" href="">Портфолио</a>            
-            <span class="head__crumbs-current">ТРЦ «Рубин-2»</span>
+          <nav class="bread" aria-label="Хлебные крошки">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li>Портфолио</li>
+            </ul>            
           </nav>
-          <h1 class="head__title">Торгово-развлекательный центр «Рубин-2»</h1>
+          <h1 class="head__title">Портфолио</h1>
         </div>
       </div>
 
-      <section class="section">
+      <section class="s-project-cards">
         <div class="contain">
           <div class="project-cards">
             <div class="project-card">
   <div class="project-card__img-w">
-    <img class="project-card__img" src="img/project-tc-1.jpg" alt="">
+    <img src="img/project-tc-1.jpg" alt="">
   </div>
   <div class="project-card__body">
     <h3 class="project-card__title">Реконструкция промышленного здания под современный торговый центр.</h3>
@@ -94,7 +95,7 @@
 
             <div class="project-card">
   <div class="project-card__img-w">
-    <img class="project-card__img" src="img/project-tc-2.jpg" alt="">
+    <img src="img/project-tc-2.jpg" alt="">
   </div>
   <div class="project-card__body">
     <h3 class="project-card__title">Фитнес-клуб «F3 Формула»</h3>
@@ -146,7 +147,7 @@
 
             <div class="project-card">
   <div class="project-card__img-w">
-    <img class="project-card__img" src="img/project-tc-3.jpg" alt="">
+    <img src="img/project-tc-3.jpg" alt="">
   </div>
   <div class="project-card__body">
     <h3 class="project-card__title">Промтехнопарк «КСК»</h3>
@@ -198,7 +199,7 @@
 
             <div class="project-card">
   <div class="project-card__img-w">
-    <img class="project-card__img" src="img/project-tc-4.jpg" alt="">
+    <img src="img/project-tc-4.jpg" alt="">
   </div>
   <div class="project-card__body">
     <h3 class="project-card__title">Торговый комплекс ОАО «Универсал»</h3>
@@ -250,7 +251,7 @@
 
             <div class="project-card">
   <div class="project-card__img-w">
-    <img class="project-card__img" src="img/project-tc-5.jpg" alt="">
+    <img src="img/project-tc-5.jpg" alt="">
   </div>
   <div class="project-card__body">
     <h3 class="project-card__title">Производственно-окрасочный корпус</h3>
@@ -302,7 +303,7 @@
 
             <div class="project-card">
   <div class="project-card__img-w">
-    <img class="project-card__img" src="img/project-tc-6.jpg" alt="">
+    <img src="img/project-tc-6.jpg" alt="">
   </div>
   <div class="project-card__body">
     <h3 class="project-card__title">Автосалоны «МАЗДА», «ЛЕКСУС», «ХЁНДЭ»</h3>
@@ -351,12 +352,23 @@
   </div>
 </div>
 
-
-            
+          
           </div>
         </div>
       </section>
-
+      <section class="s-site-cta">
+  <div class="site-cta__media">
+    <img src="img/cta-construction.jpg" alt="Инженер на строительной площадке">
+  </div>
+  <div class="site-cta__body _inv">
+    <h2>Готовы обсудить <br> ваш проект</h2>
+    <form class="site-cta__form">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="text" name="contact" placeholder="Телефон или Email" required>
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </div>
+</section>
     </main>
     <footer class="site-footer">
   <div class="contain">

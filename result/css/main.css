@@ -374,9 +374,6 @@ body {
   body.ohi {
     overflow: hidden; }
 
-.section {
-  padding: 65px 0; }
-
 .wrapper {
   width: 100%;
   margin-left: auto;
@@ -793,6 +790,10 @@ h2 {
   text-transform: uppercase;
   color: #fff; }
 
+@media (min-width: 1200px) {
+  .head__title-48 {
+    font-size: 48px; } }
+
 /* Проект: текст + слайдер. Стили плоские, без вложенности. */
 .project {
   padding-bottom: 80px; }
@@ -1103,6 +1104,10 @@ h2 {
     font-size: 11px; } }
 
 /* Карточка проекта. Стили плоские, без вложенности. */
+@media (min-width: 1200px) {
+  .s-project-cards {
+    padding-top: 60px; } }
+
 .project-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1117,22 +1122,23 @@ h2 {
   overflow: hidden;
   box-sizing: border-box; }
 
-.project-card__img {
+.project-card__img-w {
   padding: 10px;
-  padding-bottom: 0; }
-
-.project-card__img {
+  padding-bottom: 0;
   flex: 0 0 auto;
   display: block;
   width: 100%;
-  height: 488px;
-  object-fit: cover; }
+  height: 488px; }
+  .project-card__img-w img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
 
 .project-card__body {
   padding: 20px 30px 30px; }
 
 .project-card__title {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 24px;
   line-height: 1;
@@ -1153,8 +1159,7 @@ h2 {
   gap: 10px;
   border: 1px solid #52bbb5;
   border-radius: 16px;
-  padding-block: 9px;
-  padding-inline: 10px 20px;
+  padding: 0px 10px;
   height: 34px;
   font-weight: 500;
   font-size: 14px;
@@ -1192,42 +1197,15 @@ h2 {
   align-items: center;
   border: 1px solid rgba(26, 44, 69, 0.2);
   border-radius: 25px;
-  padding-block: 12px;
-  padding-inline: 16px;
-  height: 38px;
+  height: 37px;
+  padding: 0 16px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   color: #1a1b26;
-  background: #eef0f2;
-  /* подложка снята со скриншота, в ТЗ не указана */
-  box-sizing: border-box; }
+  background: #f2f2f2; }
 
 /* ---------- Адаптив ---------- */
-@media only screen and (max-width: 640px) {
-  .project-card {
-    height: auto;
-    /* фикс. высота ломает верстку на узких экранах */ }
-  .project-card__img {
-    height: 360px; } }
-
-@media only screen and (max-width: 480px) {
-  .project-card__img {
-    height: 260px; }
-  .project-card__body {
-    padding: 16px 16px 20px; }
-  .project-card__title {
-    font-size: 20px;
-    margin-bottom: 16px; }
-  .project-card__labels {
-    margin-bottom: 18px;
-    gap: 8px; }
-  .project-card__text {
-    margin-bottom: 18px;
-    font-size: 15px; }
-  .project-card__tags {
-    gap: 8px; } }
-
 .news-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2435,6 +2413,10 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); } }
 
+@media (max-width: 991px) {
+  .project-card__img-w {
+    height: 300px; } }
+
 @media (max-width: 767px) {
   section {
     padding: 80px 0; }
@@ -2501,6 +2483,9 @@ h2 {
   .site-footer__menu {
     width: 100%;
     display: flex;
+    flex-direction: column; }
+  .project-cards {
+    display: flex;
     flex-direction: column; } }
 
 @media (max-width: 575px) {
@@ -2540,7 +2525,22 @@ h2 {
   .site-footer {
     padding-bottom: 46px; }
   .site-footer__top {
-    padding-top: 60px; } }
+    padding-top: 60px; }
+  .project-card__img-w {
+    height: 220px; }
+  .project-card__body {
+    padding: 20px;
+    padding-bottom: 30px; }
+  .project-card__title {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .project-card__text {
+    font-size: 14px;
+    margin-bottom: 20px; }
+  .project-cards {
+    gap: 20px; }
+  .s-project-cards {
+    padding-top: 40px; } }
 
 @media only screen and (max-width: 360px) {
   body, body > * {
