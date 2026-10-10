@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12. 404</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+      <div class="contain">
+     <div class="page-404">
+       <img src="./img/404.png" alt="">
+       <h1>Страница не найдена</h1>
+       <p>Запрашиваемой страницы не существует. Возможно, она былаудалена или в запросе был указан неверный адрес страницы.</p>
+       <a href="" class="btn btn--arrow">На главную</a>
+     </div>
+   </div>
+ </main>
+ @@include('var/_footer.html')    
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+

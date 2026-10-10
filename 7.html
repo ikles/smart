@@ -15,37 +15,97 @@
 <![endif]-->
 </head>
 <body>
-
   <div class="wrapper">
     @@include('var/_header.html')    
-    <main class="main">      
-      <section class="section">
+    <main class="main">   
+      <div class="head__banner">
         <div class="contain">
-          <div class="news-cards">
-            <div class="news-card">
-              <img class="news-card__img" src="img/news-montazh-metallokonstrukcij.jpg" alt="">
-
-              <div class="news-card__body">
-                <span class="news-card__date">10 мая 2025</span>
-                <h3 class="news-card__title">Фотоотчет: монтаж металлоконструкций на объекте</h3>
-                <p class="news-card__text">На производственно-окрасочном корпусе завершён монтаж металлоконструкций каркаса. Приступаем к устройству ограждающих конструкций.</p>
-                <a class="news-card__link" href="#">
-                  Смотреть фото
-                  <span class="news-card__link-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 12" fill="none"><path d="M1 6h17M13 1l5 5-5 5" stroke="#52bbb5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </a>
-              </div>
-            </div>
+          <nav class="bread" aria-label="Хлебные крошки">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li>Новости</li>
+            </ul>            
+          </nav>
+          <h1 class="head__title">Новости <br> и события</h1>
+        </div>
+      </div>   
+      <section class="s-news section-t-60">
+        <div class="contain">
+          <div class="news-cards" id="news-cards">
+            @@include('var/_news-card.html',{
+              "img":"./img/news-1.jpg",
+              "title":"Фотоотчет: монтаж металлоконструкций на объекте",
+              "txt":"На производственно-окрасочном корпусе завершён монтаж металлоконструкций каркаса. Приступаем к устройству ограждающих конструкций.",
+              "date": "10 мая 2025"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-2.jpg",
+              "title":"Доставка материалов на складской комплекс",
+              "txt":"На объект в Тверской области доставлены сэндвич-панели и кровельные материалы. Начинаем монтаж стеновых ограждений.",
+              "date": "25 апреля 2025"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-3.jpg",
+              "title":"Пусконаладочные работы на объекте ТРЦ «Рубин-2»",
+              "txt":"Завершены пусконаладочные работы инженерных систем. Объект готовится к итоговой приёмке заказчиком.",
+              "date": "05 апреля 2025"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-4.jpg",
+              "title":"Подготовили презентацию о нашей компании",
+              "txt":"За время нашей работы мы реализовали ряд масштабных проектов. Каждый из проектов был реализован в срок, с соблюдением всех требований заказчика и технических регламентов.",
+              "date": "04 июня 2025"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-5.jpg",
+              "title":"Окончание работ на объекте: ул. П. Савельевой, 45",
+              "txt":"Наша компания закончила работы по возведению производственно-окрасочного корпуса на земельном участке в Твери.",
+              "date": "30 апреля 2025"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-6.jpg",
+              "title":"Забивка свай на новом объекте: ул. П. Савельевой, 45",
+              "txt":"Наша компания начала работы по возведению производственно-окрасочного корпуса. Выполнена забивка свай под фундамент.",
+              "date": "27 марта 2024"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-7.jpg",
+              "title":"Участие в выставке «Строительная неделя-2025»",
+              "txt":"Компания СМАРТСТРОЙ представила свои проекты на ежегодной строительной выставке в Твери. Стенд компании посетили более 200 гостей.",
+              "date": "15 февраля 2025"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-8.jpg",
+              "title":"Благотворительная акция «Новый год в каждый дом»",
+              "txt":"Наша компания приняла участие в благотворительной акции, организовав сбор подарков для детей из малообеспеченных семей Твери.",
+              "date": "20 декабря 2024"
+            })
+            @@include('var/_news-card.html',{
+              "img":"./img/news-9.jpg",
+              "title":"Партнёрство с Тверским строительным колледжем",
+              "txt":"Подписали соглашение о сотрудничестве с колледжем. Студенты проходят практику на наших объектах, лучшие получают приглашение в штат.",
+              "date": "01 сентября 2024"
+            })                       
+          </div>
+          <nav class="pagination">
+            <a href="#" class="pagination__arrow pagination__arrow--prev">
+              <img src="./img/pag-arr-prev.svg" alt="">
+            </a>
+            <a href="#" class="pagination__item pagination__item--active">1</a>
+            <a href="#" class="pagination__item">2</a>
+            <a href="#" class="pagination__item">3</a>
+            <span class="pagination__dots">…</span>
+            <a href="#" class="pagination__item">6</a>
+            <a href="#" class="pagination__arrow pagination__arrow--next">
+              <img src="./img/pag-arr.svg" alt="">
+            </a>
+          </nav>
+          <div class="show-640 pagination-more__w" id="pag">
+            <a data-text="Скрыть" href="" class="toggle btn pagination-more">Показать еще</a>
           </div>
         </div>
       </section>
-
-
-
-
-
-
+      @@include('var/_s-site-cta.html')
     </main>
     @@include('var/_footer.html')    
   </div>

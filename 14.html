@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11. Демонстрация компонентов</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+
+      <nav class="bread _in" aria-label="Хлебные крошки">
+        <div class="contain">
+          <ul>
+            <li><a href="">Главная</a></li>
+            <li>Демонстрация компонентов</li>
+          </ul>            
+        </div>
+      </nav>
+
+      
+
+<!-- HTML -->
+<section class="requisites">
+  <div class="contain">
+    <div class="requisites__title">Реквизиты компании</div>
+    <div class="requisites__sub">Юридическая информация для оформления договоров</div>
+
+    <div class="requisites__grid">
+      <div class="requisites__card">
+        <span class="requisites__label">Полное наименование</span>
+        <span class="requisites__value">Общество с ограниченной ответственностью «СМАРТСТРОЙ»</span>
+      </div>
+      <div class="recurities__card requisites__card">
+        <span class="requisites__label">Сокращенное наименование</span>
+        <span class="requisites__value">ООО «СМАРТСТРОЙ»</span>
+      </div>
+
+      <div class="requisites__card">
+        <span class="requisites__label">ИНН</span>
+        <span class="requisites__value">6950XXXXXX</span>
+      </div>
+      <div class="requisites__card">
+        <span class="requisites__label">КПП</span>
+        <span class="requisites__value">6950XXXXXX</span>
+      </div>
+
+      <div class="requisites__card">
+        <span class="requisites__label">ОГРН</span>
+        <span class="recurities__value requisites__value">1146952XXXXXXXX</span>
+      </div>
+      <div class="requisites__card">
+        <span class="requisites__label">Кодомический адрес</span>
+        <span class="requisites__value">170006 г. Тверь, ул. Б. Чехова, д. 16 оф. 11</span>
+      </div>
+
+      <div class="requisites__card">
+        <span class="requisites__label">Банк</span>
+        <span class="recurities__value requisites__value">Тверское отделение №8607 ПАО Сбербанк</span>
+      </div>
+      <div class="requisites__card">
+        <span class="requisites__label">Расчётный счёт</span>
+        <span class="requisites__value">40702810XXXXXXXXXX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="licenses">
+  <div class="contain">
+    <div class="licenses__title">Лицензии и сертификаты</div>
+    <div class="licenses__sub">Документы, подтверждающие нашу квалификацию</div>
+
+    <div class="licenses__grid">
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-1.jpg">
+        <span class="licenses__thumb"><img src="img/lic-1.jpg" alt=""></span>
+        <span class="licenses__name">Допуск СРО</span>
+        <span class="licenses__icon"></span>
+      </a>
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-2.jpg">
+        <span class="licenses__thumb"><img src="img/lic-2.jpg" alt=""></span>
+        <span class="licenses__name">Лицензия МНС</span>
+        <span class="licenses__icon"></span>
+      </a>
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-3.jpg">
+        <span class="licenses__thumb"><img src="img/lic-3.jpg" alt=""></span>
+        <span class="licenses__name">Сертификат ISO 9001</span>
+        <span class="licenses__icon"></span>
+      </a>
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-4.jpg">
+        <span class="licenses__thumb"><img src="img/lic-4.jpg" alt=""></span>
+        <span class="licenses__name">Свидетельство о допуске</span>
+        <span class="licenses__icon"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="projects">
+  <div class="contain">
+    <div class="projects__left">
+      <div class="projects__title">Наши проекты</div>
+      <p class="projects__text">За время нашей работы мы реализовали ряд масштабных проектов. Каждый из проектов был реализован в срок, соблюдением всех требований заказчика и технических регламентов.</p>
+
+      <div class="projects__ctrls">
+        <button type="button" class="projects__ctrl-prev"><span class="projects__arrow projects__arrow--left"></span></button>
+        <span class="projects__count"><b class="projects__current">1</b><span class="projects__total"> / 4</span></span>
+        <button type="button" class="projects__ctrl-next"><span class="projects__arrow projects__arrow--right"></span></button>
+      </div>
+
+      <a href="#" class="projects__btn">подробнее</a>
+    </div>
+
+    <div class="projects__slider">
+      <div class="projects__slide"><img src="img/project-1.jpg" alt=""></div>
+      <div class="projects__slide"><img src="img/project-2.jpg" alt=""></div>
+      <div class="projects__slide"><img src="img/project-3.jpg" alt=""></div>
+      <div class="projects__slide"><img src="img/project-4.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section class="geo">
+  <div class="contain">
+    <div class="geo__left">
+      <div class="geo__title">География проектов</div>
+      <p class="geo__text">Работаем в Тверской области и соседних регионах Центральной России</p>
+
+      <div class="geo__regions-title">Регионы присутствия</div>
+      <label class="geo__region"><input type="checkbox" checked><span class="geo__box"></span>Тверская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Псковская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Смоленская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Тульская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Московская область</label>
+    </div>
+
+    <div class="geo__map">
+      <img src="img/map.jpg" alt="">
+      <span class="geo__dot geo__dot--p1"><span class="geo__dot-label">Псков</span></span>
+      <span class="geo__dot geo__dot--t2"><span class="geo__dot-label">Тверь</span></span>
+      <span class="geo__dot geo__dot--m3"><span class="geo__dot-label">Москва</span></span>
+      <span class="geo__dot geo__dot--s4"><span class="geo__dot-label">Смоленск</span></span>
+      <span class="geo__dot geo__dot--t5"><span class="geo__dot-label">Тула</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="partner">
+  <div class="contain">
+    <div class="partner__left">
+      <div class="partner__title">Надёжный партнёр в промышленнном строительстве</div>
+      <p class="partner__text">Строительная компания «СМАРТСТРОЙ» основана в 2014 году и на протяжении 12 лет успешно реализует проекты в сфере промышленного и коммерческого строительства на территории Тверь, Тверской области и соседних регионов Центральной России.</p>
+      <p class="partner__text">Основы нашей компании составляют опытные, высококвалифицированные специалисты, работающие с современными материалами и технологиями. Опыт работы компании имеет более 15 лет совместного опыта в сфере строительства, что позволяет гарантировать высочайшее качество выполнения работ на каждом объекте.</p>
+      <p class="partner__text">За время работы мы реализовали более 30 масштабных проектов общей площадью свыше 200 000 кв. м. В штате компании трудится более 100 квалифицированных специалистов, каждый из которых вносит вклад в высокое качество наших объектов.</p>
+    </div>
+    <div class="partner__right"><img src="img/partner.jpg" alt=""></div>
+  </div>
+</section>
+
+<nav class="pagination">
+  <a href="#" class="pagination__item pagination__item--active">1</a>
+  <a href="#" class="pagination__item">2</a>
+  <a href="#" class="pagination__item">3</a>
+  <span class="pagination__dots">…</span>
+  <a href="#" class="pagination__item">6</a>
+  <a href="#" class="pagination__arrow"></a>
+</nav>
+
+
+    </main>        
+    @@include('var/_footer.html')    
+  </div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+<script>
+  // JS (jQuery) — только если нужен
+  $(function () {
+    const slider = $('.projects__slider');
+    const currentEl = $('.projects__current');
+    const totalSlides = $('.projects__slide').length;
+
+  // slick уже подключен в проекте, инициализация:
+    slider.slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      speed: 400
+    });
+
+    function updateCounter() {
+      const idx = $('.projects__slide').index($('.projects__slide.slick-active')) + 1;
+      currentEl.text(idx);
+    }
+
+    $('.projects__ctrl-prev').on('click', function () {
+      slider.slick('previous');
+      setTimeout(updateCounter, 400);
+    });
+
+    $('.projects__ctrl-next').on('click', function () {
+      slider.slick('next');
+      setTimeout(updateCounter, 400);
+    });
+
+  // fancybox уже подключен в проекте (настройка из ТЗ), здесь только data-fancybox="gallery" на карточках.
+  });
+
+</script>
+</body>
+</html>
+

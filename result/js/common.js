@@ -1,6 +1,6 @@
 jQuery(document).ready(function( $ ) {
 
-  
+
 
   $('body').click(function () {
     if( $(".toggle-mnu").hasClass("on") ){
@@ -21,6 +21,23 @@ jQuery(document).ready(function( $ ) {
     $('.header__col').toggleClass("open");    
   });
 
+
+  
+  $('.pagination-more__w .btn').on('click', function(e) {
+    var $btn = $(this);
+    if ($btn.hasClass('open')) {      
+      $btn.attr('href', '#pag');
+    }
+    else {
+      $btn.attr('href', '#news-cards');
+    }
+
+
+    $btn.toggleClass('open');
+    $btn.closest('.s-news').find('.news-cards').toggleClass('open');
+    $btn.text($btn.hasClass('open') ? 'Скрыть' : 'Показать ещё');
+
+  });
 
 
 //levels menu
@@ -64,21 +81,21 @@ jQuery(document).ready(function( $ ) {
 
   
   $(function () {
-  const $projectSlider = $('.project__slider');
+    const $projectSlider = $('.project__slider');
 
-  if ($projectSlider.length && typeof $.fn.slick === 'function') {
-    $projectSlider.slick({
-      dots: true,
-      arrows: true,
-      infinite: true,
-      speed: 600,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 5000,      
-    });
-  }
-});
+    if ($projectSlider.length && typeof $.fn.slick === 'function') {
+      $projectSlider.slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,      
+      });
+    }
+  });
 
 
 /************************************/

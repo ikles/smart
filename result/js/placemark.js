@@ -4,9 +4,9 @@ jQuery(document).ready(function( $ ) {
 
     function init () {
         var myMap = new ymaps.Map("map", {
-            center: [44.651491, 37.938316],        
+            center: [56.860851, 35.879979],        
             controls: ['zoomControl'],
-            zoom: 15            
+            zoom: 17            
         }),
 
         // Создаем геообъект с типом геометрии "Точка".
@@ -34,12 +34,12 @@ jQuery(document).ready(function( $ ) {
 
 
         // Создаем метку с помощью вспомогательного класса.
-        myPlacemark1 = new ymaps.Placemark([56.235340, 32.070925], {
+        myPlacemark1 = new ymaps.Placemark([56.860851, 35.879979], {
             // Свойства.
             // Содержимое иконки, балуна и хинта.
             iconContent: '',
-            balloonContent: 'Тверская улица, 9',
-            hintContent: 'Тверская улица, 9'
+            balloonContent: 'ул. В. Бонч-Бруевича, д. 16 оф. 11',
+            hintContent: 'ул. В. Бонч-Бруевича, д. 16 оф. 11'
         }, {
             // Опции.
             // Стандартная фиолетовая иконка.
@@ -50,22 +50,22 @@ jQuery(document).ready(function( $ ) {
 
 
 
-/*        myPlacemark2 = new ymaps.Placemark([52.778383, 41.377705], {
+       myPlacemark2 = new ymaps.Placemark([56.860851, 35.879979], {
             // Свойства.
-            hintContent: '',
+            hintContent: 'ул. В. Бонч-Бруевича, д. 16 оф. 11',
             iconContentLayout: '<div class="icn"></div>',
-            iconContent: '<div class="icn">Супермаркет Лента</div>'            
+            iconContent: '<div class="icn"></div>'
         }, {
             // Опции.
             // Своё изображение иконки метки.
             iconImageHref: 'img/geo-map.svg',
             // Размеры метки.
-            iconImageSize: [50, 70],
+            iconImageSize: [40, 56],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-3, -42],        
+            iconImageOffset: [-18, -64],        
             iconContentOffset: [11, 9] // позиция подписи
-        });*/
+        });
 
        /* myPlacemark3 = new ymaps.Placemark([52.718857, 41.449453], {
             // Свойства.
@@ -96,7 +96,7 @@ jQuery(document).ready(function( $ ) {
     // Добавляем все метки на карту.
     myMap.controls.add(zoomControl);
     myMap.geoObjects
-    .add(myPlacemark1)        
+    .add(myPlacemark2)        
     .add(myGeoObject);
 }
 

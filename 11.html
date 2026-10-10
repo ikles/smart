@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11. Демонстрация компонентов</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+      <div class="head__banner">
+        <div class="contain">
+          <nav class="bread" aria-label="Хлебные крошки">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li>Демонстрация компонентов</li>
+            </ul>            
+          </nav>
+          <h1 class="head__title">Демонстрация<br> компонентов</h1>
+        </div>
+      </div>
+
+
+      <section class="sg-sec">
+        <div class="contain">
+
+          <!-- H1 -->
+          <h1 class="sg-h1">Заголовок первого уровня (H1)</h1>
+          <p class="sg-lead">Это основной текст статьи. Строительная компания СМАРТСТРОЙ основана в 2014 году и на протяжении 12 лет профессионально реализует проекты в сфере промышленного и коммерческого строительства. В тексте статьи: строгий <a href="#" class="sg-link">ссылка-подсветка</a> и <a href="#" class="sg-link">выделенное слово</a>: это строковые ресурсы.</p>
+
+          <!-- H2 -->
+          <h2 class="sg-h2">Заголовок второго уровня (H2)</h2>
+          <p class="sg-p">Ссылка на... <strong class="sg-strong">существенное выделение</strong> используется для смысловых акцентов.</p>
+
+          <!-- H3 -->
+          <h3 class="sg-h3">Заголовок третьего уровня (H3)</h3>
+          <p class="sg-p">Генеральный подряд — это комплексное управление строительным проектом, при котором на себя полностью ответственность за организацию и выполнение всех строительно-монтажных работ, координацию субподрядчиков, соблюдение сроков в бюджета.</p>
+          <p class="sg-p">За 12 лет работы мы сформировали <a href="#" class="sg-link">собственный парк спецтехники</a> из единиц и штат более 100 квалифицированных специалистов. Это позволяет нам быть полностью автономными и не зависеть от внешних подрядчиков.</p>
+
+          <!-- Buttons -->
+          <h2 class="sg-h2">Кнопки и выделенные ссылки</h2>
+          <p class="sg-p">Все состояния и размеры интерактивных элементов</p>
+
+          <h3 class="sg-h3">Основные кнопки</h3>
+          <div class="btns">
+            
+            <a href="#" class="btn btn--primary">основная кнопка</a>
+
+            <a href="#" class="btn btn--ghost">второстепенная</a>
+            <a href="#" class="btn btn--outline">с оверлейтом</a>
+          </div>
+
+          <h3 class="sg-h3">Размеры кнопок</h3>
+          <div class="btns">
+            <a href="#" class="btn btn--primary">маленький</a>
+            <a href="#" class="btn btn--ghost">стандартный</a>
+            <a href="#" class="btn btn--outline">большая кнопка</a>
+          </div>
+
+          <h3 class="sg-h3">Неактивная кнопка</h3>
+          <div class="btns">
+            <span class="btn btn--disabled">недостаточная</span>
+          </div>
+
+          <!-- Text links -->
+          <h2 class="sg-h2">Текстовые ссылки в абзаце</h2>
+          <p class="sg-p">Внутри текста ссылки вида <a href="#" class="sg-link">подсветка-текст</a>, который при наведении становится темнее. Если ссылка ведёт на внешний сайт, она помечается стрелкой: <a href="#" class="sg-link">внешняя ссылка</a>. Также есть <a href="#" class="sg-link">ссылки-подсветки</a> для альтернативного контекста.</p>
+
+          <!-- Lists -->
+          <h2 class="sg-h2">Списки</h2>
+          <p class="sg-p">Маркированные, нумерованные и кастомные списки</p>
+
+          <ul class="sg-list">
+            <li class="sg-li">Строительство производственных зданий и цехов</li>
+            <li class="sg-li">Возведение складских комплексов класса А и В</li>
+            <li class="sg-li">Реконструкция и модернизация существующих объектов</li>
+            <li class="sg-li">Капитальный ремонт и обновление работы</li>
+          </ul>
+
+          <ol class="sg-olist">
+            <li class="sg-li">Разработка концепции и технического задания</li>
+            <li class="sg-li">Проектирование и согласование документации</li>
+            <li class="sg-li">Подборка строительной площадки</li>
+            <li class="sg-li">Выполнение строительно-монтажных работ</li>
+            <li class="sg-li">Сдача объекта в ввод в эксплуатацию</li>
+          </ol>
+
+          <ul class="sg-list sg-list--icon">
+            <li class="sg-li"><span class="sg-ico sg-ico--teal"></span>Собственный парк строительной техники — 12+ единиц</li>
+            <li class="sg-li"><span class="sg-ico sg-ico--teal"></span>Штат из 100+ квалифицированных специалистов</li>
+            <li class="sg-li"><span class="sg-ico sg-ico--teal"></span>Финансовая смета без скрытых платежей</li>
+            <li class="sg-li"><span class="sg-ico sg-ico--teal"></span>Соблюдение сроков по договору</li>
+            <li class="sg-li"><span class="sg-ico sg-ico--teal"></span>Гарантия на все виды работ — 5 лет</li>
+          </ul>
+
+          <!-- Images -->
+          <h2 class="sg-h2">Изображения в тексте</h2>
+          <p class="sg-p">Отдельно, обтекание и подписи</p>
+
+          <figure class="sg-fig-full">
+            <img src="img/smartstroy-site.jpg" alt="" class="sg-img">
+            <figcaption class="sg-cap">Рис. 1. Представительство для поста реконструкции. Объект входит в эксплуатацию в 2024 году.</figcaption>
+          </figure>
+
+          <div class="sg-wrap sg-wrap--left">
+            <img src="img/smartstroy-crane.jpg" alt="" class="sg-img">
+            <p class="sg-p">Недостатками мы — оказываем услуги технического задания и сопровождение документацией в экспертных организациях.</p>
+            <p class="sg-p">Проектирование — ключевая этап любого строительства. Мы разрабатываем проектно-рабочую документацию с учетом действующих нормативов и стандартов. Наши инженеры и имеют опыт проектирования объектов различного назначения от производственных цехов до складских сооружений.</p>
+          </div>
+
+          <h3 class="sg-h3">Огектаемое изображение справа</h3>
+          <div class="sg-wrap sg-wrap--right">
+            <p class="sg-p">Генеральный подряд — это полная ответственность за проект. Мы координируем всех участников строительства и гарантируем соблюдение сроков. Изображения в тексте: Нашу команда из 100+ специалистов и собственный парк техники позволяет выполнять проекты любой сложности. От первого черта до передачи ключей заказчику — мы единый центр ответственности.</p>
+            <img src="img/smartstroy-plant.jpg" alt="" class="sg-img">
+          </div>
+
+          <!-- Table -->
+          <h2 class="sg-h2">Таблица</h2>
+          <table class="sg-table">
+            <thead>
+              <tr class="sg-th">
+                <th scope="col">Наименование работ</th>
+                <th scope="col">Площадь, м²</th>
+                <th scope="col">Начало</th>
+                <th scope="col">Окончание</th>
+                <th scope="col">Статус</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sg-row">
+                <td>Ремонтные работы автосалона «АЗАДА», «ЛЕКУС», «КЕНЗА»</td>
+                <td>2 710,80</td><td>16.03.2021</td><td>03.10.2021</td>
+                <td><span class="sg-status sg-status--ok">завершен</span></td>
+              </tr>
+              <tr class="sg-row">
+                <td>Строительство производственно-офисного корпуса</td>
+                <td>2 400,00</td><td>27.03.2021</td><td>30.04.2025</td>
+                <td><span class="sg-status sg-status--ok">завершен</span></td>
+              </tr>
+              <tr class="sg-row">
+                <td>Реконструкция ТРЦ «Луби-2»</td>
+                <td>5 300,00</td><td>10.01.2023</td><td>15.03.2024</td>
+                <td><span class="sg-status sg-status--ok">завершен</span></td>
+              </tr>
+              <tr class="sg-row">
+                <td>Строительство складского комплекса класса А</td>
+                <td>7 200,00</td><td>01.06.2025</td><td>15.02.2026</td>
+                <td><span class="sg-status sg-status--err">в работе</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Highlighted blocks -->
+          <h2 class="sg-h2">Выделенные блоки</h2>
+          <p class="sg-p">Информационные, предупредительные и акцентные блоки</p>
+
+          <div class="sg-note sg-note--info">
+            <span class="sg-ico sg-ico--teal"></span>
+            <div class="sg-note__body">
+              <strong class="sg-note-title">Полезная информация</strong>
+              <p class="sg-p">При заказе технического плана на получение единый центр ответственности. Все вопросы — от проектирования до сдачи объекта — решает один компания. Это экономит время времени и снижает риски.</p>
+            </div>
+          </div>
+
+          <div class="sg-note sg-note--tech">
+            <span class="sg-ico sg-ico--dark"></span>
+            <div class="sg-note__body">
+              <strong class="sg-note-title">Технические характеристики типового проекта</strong>
+              <p class="sg-p">Красив здание — «материалованный (реш)» высота в охине — до 12 метров, относительность — 0,1 степень, энергоэффективность — класс а возможного установка местного класса групподинакирования до 10 тонн.</p>
+            </div>
+          </div>
+
+          <div class="sg-note sg-note--warn">
+            <span class="sg-ico sg-ico--amber"></span>
+            <div class="sg-note__body">
+              <strong class="sg-note-title">Важное предупреждение</strong>
+              <p class="sg-p">Строительные работы в зимний период требуют дополнительных мероприятий по прогреву бетона и защите материалов. Это может повлиять на сроки и цену. Мы заранее учитываем погодные факторы при планировании.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+<!-- Блок «Форма обратной связи + Результирующие сообщения» -->
+<section class="feedback">
+  <div class="feedback__dark">
+    <div class="feedback__head">
+      <div class="feedback__title">Форма обратной связи</div>
+      <div class="feedback__subtitle">Демонстрация всех типов полей и элементов формы</div>
+    </div>
+
+    <form class="feedback__form" action="" method="post">
+      <div class="feedback__head2">
+        <div class="feedback__title2">Оставьте заявку</div>
+        <div class="feedback__subtitle2">Все поля, отмеченные звёздочкой, обязательны для заполнения</div>
+      </div>
+
+      <div class="feedback__row">
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-name">ИМЯ *</label>
+          <input class="feedback__input" type="text" id="fb-name" name="name" placeholder="Иван">
+        </div>
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-surname">ФАМИЛИЯ *</label>
+          <input class="feedback__input" type="text" id="fb-surname" name="surname" placeholder="Иванов">
+        </div>
+      </div>
+
+      <div class="feedback__row">
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-email">EMAIL *</label>
+          <input class="feedback__input" type="email" id="fb-email" name="email" placeholder="ivanov@mail.ru">
+          <span class="feedback__hint feedback__hint--error">Пожалуйста, введите корректный Email</span>
+        </div>
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-phone">ТЕЛЕФОН *</label>
+          <input class="feedback__input" type="tel" id="fb-phone" name="phone" placeholder="+7(900) 000-00-00">
+          <span class="feedback__hint">Формат: +7 (xxx) xxx-xx-xx</span>
+        </div>
+      </div>
+
+      <div class="feedback__row">
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-type">ТИП ОБЪЕКТА</label>
+          <select class="feedback__select" id="fb-type" name="type">
+            <option value="">Выберите тип</option>
+          </select>
+        </div>
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-area">ПЛАНИРУЕМАЯ ПЛОЩАДЬ</label>
+          <select class="feedback__select" id="fb-area" name="area">
+            <option value="">Выберите диапазон</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="feedback__field">
+        <label class="feedback__label" for="fb-message">СООБЩЕНИЕ</label>
+        <textarea class="feedback__textarea" id="fb-message" name="message" placeholder="Опишите ваш проект или задайте вопрос ..."></textarea>
+      </div>
+
+      <div class="feedback__check-row">
+        <div class="feedback__field">
+          <label class="feedback__label" for="fb-services">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</label>
+        </div>
+        <div class="feedback__checks">
+          <span class="feedback__check-item"><input type="checkbox" id="cb-1" name="services[]" checked><label for="cb-1">Проектирование</label></span>
+          <span class="feedback__check-item"><input type="checkbox" id="cb-2" name="services[]"><label for="cb-2">Услуги технического заказчика</label></span>
+          <span class="feedback__check-item"><input type="checkbox" id="cb-3" name="services[]"><label for="cb-3">Благоустройство территории</label></span>
+          <span class="feedback__check-item"><input type="checkbox" id="cb-4" name="services[]"><label for="cb-4">Последующее обслуживание</label></span>
+        </div>
+      </div>
+
+      <div class="feedback__radio-row">
+        <div class="feedback__field">
+          <label class="feedback__label" for="">ПРЕДПОЧИТЕЛЬНЫЙ СПОСОБ СВЯЗИ</label>
+        </div>
+        <div class="feedback__radios">
+          <span class="feedback__radio-item"><input type="radio" id="r-1" name="contact" checked><label for="r-1">По телефону</label></span>
+          <span class="feedback__radio-item"><input type="radio" id="r-2" name="contact"><label for="r-2">По Email</label></span>
+          <span class="feedback__radio-item"><input type="radio" id="r-3" name="contact"><label for="r-3">Whatsapp / Telegram</label></span>
+        </div>
+      </div>
+
+      <div class="feedback__consent">
+        <span class="feedback__check-item"><input type="checkbox" id="cb-consent" name="consent" checked><label for="cb-consent">Я согласен на обработку персональных данных и принимаю условия политики конфиденциальности</label></span>
+      </div>
+
+      <button class="feedback__btn" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+    </form>
+  </div>
+
+  <div class="feedback__light">
+    <div class="feedback__head2">
+      <div class="feedback__title2">Результирующие сообщения</div>
+      <div class="feedback__subtitle2">Уведомления об успехе, ошибке и другие системные сообщения</div>
+    </div>
+
+    <div class="msg msg--success">
+      <span class="msg__icon"></span>
+      <div class="msg__body">
+        <div class="msg__title">Заявка успешно отправлена!</div>
+        <div class="msg__text">Мы свяжем с вами в ближайшее время. Номер вашей заявки: #SM-2025-0482. Пожалуйста, сохраните его для уточнения статуса.</div>
+      </div>
+    </div>
+
+    <div class="msg msg--success">
+      <span class="msg__icon"></span>
+      <div class="msg__body">
+        <div class="msg__title">Письмо отправлено!</div>
+        <div class="msg__text">Ответ будет направлен на указанный email в течение рабочего дня. Если письмо не пришло, проверьте папку «Спам».</div>
+      </div>
+    </div>
+
+    <div class="msg msg--error">
+      <span class="msg__icon"></span>
+      <div class="msg__body">
+        <div class="msg__title">Ошибка при отправке формы</div>
+        <div class="msg__text">Пожалуйста, проверьте правильность заполнения полей. Поля «Email» и «Телефон» должны быть указаны в корректном формате.</div>
+      </div>
+    </div>
+
+    <div class="msg msg--warning">
+      <span class="msg__icon"></span>
+      <div class="msg__body">
+        <div class="msg__title">Файл не прикреплен</div>
+        <div class="msg__text">Размер файла превысил 10 МБ. Пожалуйста, загрузите файл меньшего размера или отправьте его отдельно на почту <a href="mailto:smarts69@mail.ru" class="feedback__mail">smarts69@mail.ru</a>.</div>
+      </div>
+    </div>
+
+    <div class="msg msg--info">
+      <span class="msg__icon"></span>
+      <div class="msg__body">
+        <div class="msg__title">Информационное сообщение</div>
+        <div class="msg__text">В настоящее время мы обрабатываем заявки в течение 2–3 часов. Если ваш вопрос срочный, позвоните по телефону <a href="tel:+7482232010" class="feedback__phone"><b>8 (4822) 32-20-10</b></a>.</div>
+      </div>
+    </div>
+
+    <div class="msg msg--warning">
+      <span class="msg__icon"></span>
+      <div class="msg__body">
+        <div class="msg__title">Внимание!</div>
+        <div class="msg__text">Срок действия коммерческого предложения истекает через 3 дня. Пожалуйста, подтвердите намерения или запросите продление.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>        
+@@include('var/_footer.html')    
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+

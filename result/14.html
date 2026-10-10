@@ -5,7 +5,7 @@
   <!--meta name="viewport" content="width=1200px"-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3. О компании - История компании</title>  
+  <title>11. Демонстрация компонентов</title>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="css/select2.min.css">
 <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="css/main.css">
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -50,176 +49,166 @@
 </header>    
     <main class="main">
 
+      <nav class="bread _in" aria-label="Хлебные крошки">
+        <div class="contain">
+          <ul>
+            <li><a href="">Главная</a></li>
+            <li>Демонстрация компонентов</li>
+          </ul>            
+        </div>
+      </nav>
 
-<section class="history">
+      
+
+<!-- HTML -->
+<section class="requisites">
   <div class="contain">
-    <div class="history-head">
-      <div class="history-head-title">История компании</div>
-      <div class="history-head-text">Ключевые этапы развития с 2014 года</div>
-    </div>
+    <div class="requisites__title">Реквизиты компании</div>
+    <div class="requisites__sub">Юридическая информация для оформления договоров</div>
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-left">
-          <div class="timeline-year">2014</div>
-          <div class="timeline-title">ОСНОВАНИЕ КОМПАНИИ</div>
-          <div class="timeline-text">Создание компании «СМАРТСТРОЙ» в Твери. Формирование команды профессионалов и парка строительной техники.</div>
-        </div>
-        <div class="timeline-mid">
-          <span class="timeline-line"></span>
-          <span class="timeline-dot dot-teal"></span>
-        </div>
-        <div class="timeline-right">
-          <div class="timeline-img-wrap">
-            <img src="img/history-2014.jpg" alt="" class="timeline-img">
-          </div>
-        </div>
+    <div class="requisites__grid">
+      <div class="requisites__card">
+        <span class="requisites__label">Полное наименование</span>
+        <span class="requisites__value">Общество с ограниченной ответственностью «СМАРТСТРОЙ»</span>
+      </div>
+      <div class="recurities__card requisites__card">
+        <span class="requisites__label">Сокращенное наименование</span>
+        <span class="requisites__value">ООО «СМАРТСТРОЙ»</span>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-left">
-          <div class="timeline-year">2016</div>
-          <div class="timeline-title">ПЕРВЫЕ КРУПНЫЕ ОБЪЕКТЫ</div>
-          <div class="timeline-text">Реализация первых промышленных объектов общей площадью более 15 000 м². Расширение штата до 40 специалистов.</div>
-        </div>
-        <div class="timeline-mid">
-          <span class="timeline-line"></span>
-          <span class="timeline-dot"></span>
-        </div>
-        <div class="timeline-right">
-          <div class="timeline-img-wrap">
-            <img src="img/history-2016.jpg" alt="" class="timeline-img">
-          </div>
-        </div>
+      <div class="requisites__card">
+        <span class="requisites__label">ИНН</span>
+        <span class="requisites__value">6950XXXXXX</span>
+      </div>
+      <div class="requisites__card">
+        <span class="requisites__label">КПП</span>
+        <span class="requisites__value">6950XXXXXX</span>
+      </div>
+
+      <div class="requisites__card">
+        <span class="requisites__label">ОГРН</span>
+        <span class="recurities__value requisites__value">1146952XXXXXXXX</span>
+      </div>
+      <div class="requisites__card">
+        <span class="requisites__label">Кодомический адрес</span>
+        <span class="requisites__value">170006 г. Тверь, ул. Б. Чехова, д. 16 оф. 11</span>
+      </div>
+
+      <div class="requisites__card">
+        <span class="requisites__label">Банк</span>
+        <span class="recurities__value requisites__value">Тверское отделение №8607 ПАО Сбербанк</span>
+      </div>
+      <div class="requisites__card">
+        <span class="requisites__label">Расчётный счёт</span>
+        <span class="requisites__value">40702810XXXXXXXXXX</span>
       </div>
     </div>
   </div>
 </section>
 
+<section class="licenses">
+  <div class="contain">
+    <div class="licenses__title">Лицензии и сертификаты</div>
+    <div class="licenses__sub">Документы, подтверждающие нашу квалификацию</div>
 
+    <div class="licenses__grid">
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-1.jpg">
+        <span class="licenses__thumb"><img src="img/lic-1.jpg" alt=""></span>
+        <span class="licenses__name">Допуск СРО</span>
+        <span class="licenses__icon"></span>
+      </a>
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-2.jpg">
+        <span class="licenses__thumb"><img src="img/lic-2.jpg" alt=""></span>
+        <span class="licenses__name">Лицензия МНС</span>
+        <span class="licenses__icon"></span>
+      </a>
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-3.jpg">
+        <span class="licenses__thumb"><img src="img/lic-3.jpg" alt=""></span>
+        <span class="licenses__name">Сертификат ISO 9001</span>
+        <span class="licenses__icon"></span>
+      </a>
+      <a class="licenses__item" href="#" data-fancybox="gallery" data-src="img/lic-4.jpg">
+        <span class="licenses__thumb"><img src="img/lic-4.jpg" alt=""></span>
+        <span class="licenses__name">Свидетельство о допуске</span>
+        <span class="licenses__icon"></span>
+      </a>
+    </div>
+  </div>
+</section>
 
-     <section class="history">
-      <div class="contain">
-        <div class="history__header">
-          <div class="history__title">История компании</div>
-          <div class="history__subtitle">Ключевые этапы развития с 2014 года</div>
-        </div>
-        <div class="history__timeline">
-          <div class="history__item">
-            <div class="history__left">
-              <div class="history__year">2014</div>
-              <div class="history__line"></div>
-              <div class="history__name">Основание компании</div>
-              <div class="history__text">Создание компании «СМАРТСТРОЙ» в Твери. Формирование команды профессионалов и парка строительной техники.</div>
-            </div>
-            <div class="history__dot history__dot--active"></div>
-            <div class="history__circle">
-              <div class="history__circle-in">
-                <img src="img/history-1.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="history__item">
-            <div class="history__left">
-              <div class="history__year">2016</div>
-              <div class="history__line"></div>
-              <div class="history__name">Первые крупные объекты</div>
-              <div class="history__text">Реализация первых промышленных объектов общей площадью более 15 000 м². Расширение штата до 40 специалистов.</div>
-            </div>
-            <div class="history__dot"></div>
-            <div class="history__circle">
-              <div class="history__circle-in">
-                <img src="img/history-2.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="history__item">
-            <div class="history__left">
-              <div class="history__year">2018</div>
-              <div class="history__line"></div>
-              <div class="history__name">Расширение географии</div>
-              <div class="history__text">Выход на рынки соседних регионов: Москва, Московская область, Смоленск. Увеличение парка спецтехники.</div>
-            </div>
-            <div class="history__dot"></div>
-            <div class="history__circle">
-              <div class="history__circle-in">
-                <img src="img/history-3.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
+<section class="projects">
+  <div class="contain">
+    <div class="projects__left">
+      <div class="projects__title">Наши проекты</div>
+      <p class="projects__text">За время нашей работы мы реализовали ряд масштабных проектов. Каждый из проектов был реализован в срок, соблюдением всех требований заказчика и технических регламентов.</p>
+
+      <div class="projects__ctrls">
+        <button type="button" class="projects__ctrl-prev"><span class="projects__arrow projects__arrow--left"></span></button>
+        <span class="projects__count"><b class="projects__current">1</b><span class="projects__total"> / 4</span></span>
+        <button type="button" class="projects__ctrl-next"><span class="projects__arrow projects__arrow--right"></span></button>
       </div>
-    </section>
 
-
-  <section class="history">
-
-    <div class="history__head">
-      <h1 class="history__title2">История компании</h1>
-      <p class="history__subtitle2">Ключевые этапы развития с 2014 года</p>
+      <a href="#" class="projects__btn">подробнее</a>
     </div>
 
-    <div class="history__rows">
-
-      <!-- ЭТАП: 2014 -->
-      <div class="history__row">
-        <div class="history__content">
-          <div class="history__year">2014</div>
-          <div class="history__divider"></div>
-          <h2 class="history__stage-title">Основание компании</h2>
-          <p class="history__stage-text">
-            Создание компании «СМАРТСТРОЙ» в Твери.
-            Формирование команды профессионалов
-            и парка строительной техники.
-          </p>
-        </div>
-
-        <!-- ЗАГЛУШКА: точка-маркер 24×24 (fill #52bbb5) -->
-        <div class="history__dot"></div>
-
-        <div class="history__stage">
-          <!-- ОБЕРТКА + ЗАГЛУШКА для SVG:
-               внешнее кольцо 600×600 (stroke 2px #52bbb5),
-               внутренний круг 520×520 (fill #1a2c45) — сюда вставить SVG -->
-          <div class="stage-ring">
-            <div class="stage-circle"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ЭТАП: 2016 -->
-      <div class="history__row">
-        <div class="history__content">
-          <div class="history__year">2016</div>
-          <div class="history__divider"></div>
-          <h2 class="history__stage-title">Первые крупные объекты</h2>
-          <p class="history__stage-text">
-            Реализация первых промышленных объектов
-            общей площадью более 15 000 м².
-            Расширение штатом до 40 специалистов.
-          </p>
-        </div>
-
-        <!-- ЗАГЛУШКА: точка-маркер 24×24 (серый, по макету) -->
-        <div class="history__dot history__dot--muted"></div>
-
-        <div class="history__stage">
-          <!-- ОБЕРТКА + ЗАГЛУШКА для SVG:
-               внешнее кольцо 600×600 (stroke 2px #52bbb5),
-               внутренний круг 520×520 (fill #1a2c45) — сюда вставить SVG -->
-          <div class="stage-ring">
-            <div class="stage-circle"></div>
-          </div>
-        </div>
-      </div>
-
+    <div class="projects__slider">
+      <div class="projects__slide"><img src="img/project-1.jpg" alt=""></div>
+      <div class="projects__slide"><img src="img/project-2.jpg" alt=""></div>
+      <div class="projects__slide"><img src="img/project-3.jpg" alt=""></div>
+      <div class="projects__slide"><img src="img/project-4.jpg" alt=""></div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="geo">
+  <div class="contain">
+    <div class="geo__left">
+      <div class="geo__title">География проектов</div>
+      <p class="geo__text">Работаем в Тверской области и соседних регионах Центральной России</p>
+
+      <div class="geo__regions-title">Регионы присутствия</div>
+      <label class="geo__region"><input type="checkbox" checked><span class="geo__box"></span>Тверская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Псковская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Смоленская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Тульская область</label>
+      <label class="geo__region"><input type="checkbox"><span class="geo__box"></span>Московская область</label>
+    </div>
+
+    <div class="geo__map">
+      <img src="img/map.jpg" alt="">
+      <span class="geo__dot geo__dot--p1"><span class="geo__dot-label">Псков</span></span>
+      <span class="geo__dot geo__dot--t2"><span class="geo__dot-label">Тверь</span></span>
+      <span class="geo__dot geo__dot--m3"><span class="geo__dot-label">Москва</span></span>
+      <span class="geo__dot geo__dot--s4"><span class="geo__dot-label">Смоленск</span></span>
+      <span class="geo__dot geo__dot--t5"><span class="geo__dot-label">Тула</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="partner">
+  <div class="contain">
+    <div class="partner__left">
+      <div class="partner__title">Надёжный партнёр в промышленнном строительстве</div>
+      <p class="partner__text">Строительная компания «СМАРТСТРОЙ» основана в 2014 году и на протяжении 12 лет успешно реализует проекты в сфере промышленного и коммерческого строительства на территории Тверь, Тверской области и соседних регионов Центральной России.</p>
+      <p class="partner__text">Основы нашей компании составляют опытные, высококвалифицированные специалисты, работающие с современными материалами и технологиями. Опыт работы компании имеет более 15 лет совместного опыта в сфере строительства, что позволяет гарантировать высочайшее качество выполнения работ на каждом объекте.</p>
+      <p class="partner__text">За время работы мы реализовали более 30 масштабных проектов общей площадью свыше 200 000 кв. м. В штате компании трудится более 100 квалифицированных специалистов, каждый из которых вносит вклад в высокое качество наших объектов.</p>
+    </div>
+    <div class="partner__right"><img src="img/partner.jpg" alt=""></div>
+  </div>
+</section>
+
+<nav class="pagination">
+  <a href="#" class="pagination__item pagination__item--active">1</a>
+  <a href="#" class="pagination__item">2</a>
+  <a href="#" class="pagination__item">3</a>
+  <span class="pagination__dots">…</span>
+  <a href="#" class="pagination__item">6</a>
+  <a href="#" class="pagination__arrow"></a>
+</nav>
 
 
-
-  </main>
-  <footer class="site-footer">
+    </main>        
+    <footer class="site-footer">
   <div class="contain">
 
     <div class="site-footer__top">
@@ -287,7 +276,7 @@
 
   </div>
 </footer>    
-</div>
+  </div>
 <!--wrapper-->
 
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -299,6 +288,40 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/dynamic_adapt.js"></script>
   <script src="js/common.js"></script>
+<script>
+  // JS (jQuery) — только если нужен
+  $(function () {
+    const slider = $('.projects__slider');
+    const currentEl = $('.projects__current');
+    const totalSlides = $('.projects__slide').length;
+
+  // slick уже подключен в проекте, инициализация:
+    slider.slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      speed: 400
+    });
+
+    function updateCounter() {
+      const idx = $('.projects__slide').index($('.projects__slide.slick-active')) + 1;
+      currentEl.text(idx);
+    }
+
+    $('.projects__ctrl-prev').on('click', function () {
+      slider.slick('previous');
+      setTimeout(updateCounter, 400);
+    });
+
+    $('.projects__ctrl-next').on('click', function () {
+      slider.slick('next');
+      setTimeout(updateCounter, 400);
+    });
+
+  // fancybox уже подключен в проекте (настройка из ТЗ), здесь только data-fancybox="gallery" на карточках.
+  });
+
+</script>
 </body>
 </html>
 
