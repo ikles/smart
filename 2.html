@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2. О компании</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+      <div class="head__banner">
+        <div class="contain">
+          <nav class="bread" aria-label="Хлебные крошки">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li>О компании</li>
+            </ul>            
+          </nav>
+          <h1 class="head__title">
+            О компании <br>СМАРТСТРОЙ
+          </h1>
+        </div>
+      </div>
+
+      <section class="s-partner">
+        <div class="contain">
+          <div class="partner__row">
+            <div class="partner__left">
+              <h2>Надёжный партнёр в промышленнном строительстве</h2>
+              <p>Строительная компания «СМАРТСТРОЙ» основана в 2014 году и на протяжении 12 лет успешно реализует проекты в сфере промышленного и коммерческого строительства на территории Тверь, Тверской области и соседних регионов Центральной России.</p>
+              <p>Основы нашей компании составляют опытные, высококвалифицированные специалисты, работающие с современными материалами и технологиями. Опыт работы компании имеет более 15 лет совместного опыта в сфере строительства, что позволяет гарантировать высочайшее качество выполнения работ на каждом объекте.</p>
+              <p>За время работы мы реализовали более 30 масштабных проектов общей площадью свыше 200 000 кв. м. В штате компании трудится более 100 квалифицированных специалистов, каждый из которых вносит вклад в высокое качество наших объектов.</p>
+            </div>
+            <div class="partner__right">
+              <img src="./img/partner.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-values">
+        <div class="contain">
+          <h2>Наши ценности</h2>
+          <p class="subtitle">Принципы, которые лежат в основе нашей работы</p>
+          <div class="cycle__grid cycle__grid--values">
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/values__icon-1.svg",
+              "title":"Ответственность",
+              "txt":"Мы берём на себя полную ответственность за результат и соблюдение всех договорённостей. Каждый проект сопровождается до  полного ввода в эксплуатацию."
+            })
+
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/values__icon-2.svg",
+              "title":"Эффективность",
+              "txt":"Собственная техника и штат специалистов позволяют  оптимизировать затраты и соблюдать сроки без привлечения непроверенных  субподрядчиков."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/values__icon-3.svg",
+              "title":"Прозрачность",
+              "txt":"Честная смета без скрытых платежей. Мы фиксируем стоимость до начала работ и предупреждаем о любых изменениях заранее."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/values__icon-4.svg",
+              "title":"Качество",
+              "txt":"Работаем с соблюдением технических регламентов и стандартов. Каждый объект — подтверждение нашей экспертизы и репутации."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/values__icon-5.svg",
+              "title":"Масштаб",
+              "txt":"Реализуем проекты различного назначения: от производственных цехов до спортивных объектов и торговых центров."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/values__icon-6.svg",
+              "title":"Надёжность",
+              "txt":"Более 25 лет опыта у основателей компании. Соблюдаем гарантийные обязательства и остаёмся на связи после сдачи объекта."
+            })
+          </div>
+        </div>
+      </section>
+      <section class="s-history">
+        <div class="contain">
+          <h2>История компании</h2>
+          <p class="subtitle">Ключевые этапы развития с 2014 года</p>
+
+
+
+
+          <div class="timeline">
+            @@include('var/_timeline-item.html',{
+              "title":"ОСНОВАНИЕ КОМПАНИИ",
+              "txt":"Создание компании «СМАРТСТРОЙ» в Твери. Формирование команды профессионалов и парка строительной техники.",
+              "cls": "active",
+              "img": "./img/history-2014.png",
+              "pic": "./img/history-2014.svg"
+            })          
+          </div>
+        </div>
+      </section>
+      <section class="s-licenses">
+        <div class="contain">
+          <h2>Лицензии и сертификаты</h2>
+          <div class="subtitle">Документы, подтверждающие нашу квалификацию</div>
+
+          <div class="licenses__grid">
+            <div class="licenses__item">
+              <a href="#" data-fancybox="gallery" data-src="./img/lic-1.jpg" class="licenses__thumb"><img src="./img/lic-1.jpg" alt=""></a>
+              <a href="./img/lic-1.jpg" download class="licenses__name">Допуск СРО</a>
+            </div>
+
+            <div class="licenses__item">
+              <a href="#" data-fancybox="gallery" data-src="./img/lic-2.jpg" class="licenses__thumb"><img src="./img/lic-2.jpg" alt=""></a>
+              <a href="./img/lic-2.jpg" download class="licenses__name">Лицензия МНС</a>
+            </div>
+
+            <div class="licenses__item">
+              <a href="#" data-fancybox="gallery" data-src="./img/lic-3.jpg" class="licenses__thumb"><img src="./img/lic-3.jpg" alt=""></a>
+              <a href="./img/lic-3.jpg" download class="licenses__name">Сертификат ISO 9001</a>
+            </div>
+
+            <div class="licenses__item">
+              <a href="#" data-fancybox="gallery" data-src="./img/lic-4.jpg" class="licenses__thumb"><img src="./img/lic-4.jpg" alt=""></a>
+              <a href="./img/lic-4.jpg" download class="licenses__name">Свидетельство о допуске</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('var/_s-site-cta.html')
+    </main>
+    @@include('var/_footer.html')    
+  </div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+

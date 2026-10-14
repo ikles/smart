@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3. О компании - История компании</title>  
   @@include('var/_styless.html')
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -22,176 +21,62 @@
     <main class="main">
 
 
-<section class="history">
-  <div class="contain">
-    <div class="history-head">
-      <div class="history-head-title">История компании</div>
-      <div class="history-head-text">Ключевые этапы развития с 2014 года</div>
-    </div>
+      <section class="s-history">
+        <div class="contain">
+          <h2>История компании</h2>
+          <p class="subtitle">Ключевые этапы развития с 2014 года</p>
+          <div class="timeline">
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-left">
-          <div class="timeline-year">2014</div>
-          <div class="timeline-title">ОСНОВАНИЕ КОМПАНИИ</div>
-          <div class="timeline-text">Создание компании «СМАРТСТРОЙ» в Твери. Формирование команды профессионалов и парка строительной техники.</div>
-        </div>
-        <div class="timeline-mid">
-          <span class="timeline-line"></span>
-          <span class="timeline-dot dot-teal"></span>
-        </div>
-        <div class="timeline-right">
-          <div class="timeline-img-wrap">
-            <img src="img/history-2014.jpg" alt="" class="timeline-img">
+            @@include('var/_timeline-item.html',{
+              "title":"ОСНОВАНИЕ КОМПАНИИ",
+              "txt":"Создание компании «СМАРТСТРОЙ» в Твери. Формирование команды профессионалов и парка строительной техники.",
+              "cls": "active",
+              "img": "./img/history-2014.png",
+              "pic": "./img/history-2014.svg"
+            })
+            @@include('var/_timeline-item.html',{
+              "title":"Первые крупные объекты",
+              "txt":"Реализация первых промышленных объектов общей площадью более 15 000 м². Расширение штата до 40 специалистов.",
+              "cls": "",
+              "img": "./img/history-2016.png",
+              "pic": "./img/history-2016.svg"
+            })
+            @@include('var/_timeline-item.html',{
+              "title":"Расширение географии",
+              "txt":"Выход на рынки соседних регионов: Москва, Московская область, Смоленск. Увеличение парка спецтехники.",
+              "cls": "",
+              "img": "./img/history-2018.png",
+              "pic": "./img/history-2018.svg"
+            })
+            @@include('var/_timeline-item.html',{
+              "title":"100 000 м² построено",
+              "txt":"Преодоление отметки в 100 000 м² построенных объектов. Запуск направления проектирования.",
+              "cls": "",
+              "img": "./img/history-2020.png",
+              "pic": "./img/history-2020.svg"
+            })
+            @@include('var/_timeline-item.html',{
+              "title":"Масштабирование",
+              "txt":"Расширение штата до 100+ специалистов. Реализация знаковых проектов.",
+              "cls": "",
+              "img": "./img/history-2023.png",
+              "pic": "./img/history-2023.svg"
+            })
+            @@include('var/_timeline-item.html',{
+              "title":"200 000 м² и 30+ проектов",
+              "txt":"Преодоление рубежа в 200 000 м². География проектов охватывает 11 городов Центральной России.",
+              "cls": "",
+              "img": "./img/history-2026.png",
+              "pic": "./img/history-2026.svg"
+            })
+
           </div>
         </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-left">
-          <div class="timeline-year">2016</div>
-          <div class="timeline-title">ПЕРВЫЕ КРУПНЫЕ ОБЪЕКТЫ</div>
-          <div class="timeline-text">Реализация первых промышленных объектов общей площадью более 15 000 м². Расширение штата до 40 специалистов.</div>
-        </div>
-        <div class="timeline-mid">
-          <span class="timeline-line"></span>
-          <span class="timeline-dot"></span>
-        </div>
-        <div class="timeline-right">
-          <div class="timeline-img-wrap">
-            <img src="img/history-2016.jpg" alt="" class="timeline-img">
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+      
+    </main>
+    @@include('var/_footer.html')    
   </div>
-</section>
-
-
-
-     <section class="history">
-      <div class="contain">
-        <div class="history__header">
-          <div class="history__title">История компании</div>
-          <div class="history__subtitle">Ключевые этапы развития с 2014 года</div>
-        </div>
-        <div class="history__timeline">
-          <div class="history__item">
-            <div class="history__left">
-              <div class="history__year">2014</div>
-              <div class="history__line"></div>
-              <div class="history__name">Основание компании</div>
-              <div class="history__text">Создание компании «СМАРТСТРОЙ» в Твери. Формирование команды профессионалов и парка строительной техники.</div>
-            </div>
-            <div class="history__dot history__dot--active"></div>
-            <div class="history__circle">
-              <div class="history__circle-in">
-                <img src="img/history-1.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="history__item">
-            <div class="history__left">
-              <div class="history__year">2016</div>
-              <div class="history__line"></div>
-              <div class="history__name">Первые крупные объекты</div>
-              <div class="history__text">Реализация первых промышленных объектов общей площадью более 15 000 м². Расширение штата до 40 специалистов.</div>
-            </div>
-            <div class="history__dot"></div>
-            <div class="history__circle">
-              <div class="history__circle-in">
-                <img src="img/history-2.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="history__item">
-            <div class="history__left">
-              <div class="history__year">2018</div>
-              <div class="history__line"></div>
-              <div class="history__name">Расширение географии</div>
-              <div class="history__text">Выход на рынки соседних регионов: Москва, Московская область, Смоленск. Увеличение парка спецтехники.</div>
-            </div>
-            <div class="history__dot"></div>
-            <div class="history__circle">
-              <div class="history__circle-in">
-                <img src="img/history-3.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-  <section class="history">
-
-    <div class="history__head">
-      <h1 class="history__title2">История компании</h1>
-      <p class="history__subtitle2">Ключевые этапы развития с 2014 года</p>
-    </div>
-
-    <div class="history__rows">
-
-      <!-- ЭТАП: 2014 -->
-      <div class="history__row">
-        <div class="history__content">
-          <div class="history__year">2014</div>
-          <div class="history__divider"></div>
-          <h2 class="history__stage-title">Основание компании</h2>
-          <p class="history__stage-text">
-            Создание компании «СМАРТСТРОЙ» в Твери.
-            Формирование команды профессионалов
-            и парка строительной техники.
-          </p>
-        </div>
-
-        <!-- ЗАГЛУШКА: точка-маркер 24×24 (fill #52bbb5) -->
-        <div class="history__dot"></div>
-
-        <div class="history__stage">
-          <!-- ОБЕРТКА + ЗАГЛУШКА для SVG:
-               внешнее кольцо 600×600 (stroke 2px #52bbb5),
-               внутренний круг 520×520 (fill #1a2c45) — сюда вставить SVG -->
-          <div class="stage-ring">
-            <div class="stage-circle"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ЭТАП: 2016 -->
-      <div class="history__row">
-        <div class="history__content">
-          <div class="history__year">2016</div>
-          <div class="history__divider"></div>
-          <h2 class="history__stage-title">Первые крупные объекты</h2>
-          <p class="history__stage-text">
-            Реализация первых промышленных объектов
-            общей площадью более 15 000 м².
-            Расширение штатом до 40 специалистов.
-          </p>
-        </div>
-
-        <!-- ЗАГЛУШКА: точка-маркер 24×24 (серый, по макету) -->
-        <div class="history__dot history__dot--muted"></div>
-
-        <div class="history__stage">
-          <!-- ОБЕРТКА + ЗАГЛУШКА для SVG:
-               внешнее кольцо 600×600 (stroke 2px #52bbb5),
-               внутренний круг 520×520 (fill #1a2c45) — сюда вставить SVG -->
-          <div class="stage-ring">
-            <div class="stage-circle"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  </main>
-  @@include('var/_footer.html')    
-</div>
 <!--wrapper-->
 
 @@include('var/_scripts.html')

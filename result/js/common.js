@@ -66,19 +66,50 @@ jQuery(document).ready(function( $ ) {
   }
 
 
-  $('.gal__slider').slick({
-    infinite: false,    
-    speed: 600,
-    slidesToScroll: 1,
-    autoplay: false,    
+  $(function () {
+    const $slider = $('.projects__slider');
+
+  // Инициализация слайдера
+    $slider.slick({
+    arrows: false,          // отключаем встроенные стрелки
+    dots: false,            // отключаем точки
+    infinite: true,
     slidesToShow: 1,
-    cssEase: 'linear',  
-    autoplaySpeed: 0,  
-    touchThreshold: 10,
-    arrows: true,
-    pauseOnHover: true,  
+    slidesToScroll: 1,
+    adaptiveHeight: true
   });
 
+  // Кнопки навигации
+    $('.projects__ctrl-prev').on('click', function () {
+      $slider.slick('slickPrev');
+    });
+
+    $('.projects__ctrl-next').on('click', function () {
+      $slider.slick('slickNext');
+    });
+
+  // Обновление счётчика
+    function updateCounter() {
+    const current = $slider.slick('slickCurrentSlide') + 1; // с 1, а не с 0
+    const total = $slider.slick('getSlick').slideCount;
+
+    $('.projects__current').text(current);
+    $('.projects__total').text(total);
+  }
+
+  // Первичная инициализация счётчика
+  updateCounter();
+
+  // Обновляем при смене слайда
+  $slider.on('afterChange', function () {
+    updateCounter();
+  });
+
+  // На случай переинициализации / изменения размера
+  $slider.on('init reInit', function () {
+    updateCounter();
+  });
+});
   
   $(function () {
     const $projectSlider = $('.project__slider');
@@ -170,6 +201,74 @@ jQuery(document).ready(function( $ ) {
   }
 
   $(".tel").mask("+ 7 (999)-999-99-99");
+
+  $(function () {
+    const $buttons = $('.geo__actions button');
+    const $dots = $('.geo__dot');
+
+    function setActive(index) {
+      $buttons.removeClass('active');
+      $dots.removeClass('active');
+      if (index >= 0) {
+        $buttons.eq(index).addClass('active');
+        $dots.eq(index).addClass('active');
+      }
+    }
+
+  // Десктоп: наведение / уход
+    $buttons.on('mouseenter', function () {
+      setActive($buttons.index(this));
+    });
+
+    $buttons.on('mouseleave', function () {
+      setActive(-1);
+    });
+
+  // Мобильные: тап (на тач-устройствах mouseenter/mouseleave обычно не мешают)
+    $buttons.on('click touchstart', function (e) {
+      e.preventDefault();
+      setActive($buttons.index(this));
+    });
+  });
+
+  $(function () {
+    const svgCache = {};
+
+    $('.geo__dot img').each(function () {
+      const $img = $(this);
+      const src = $img.attr('src');
+      if (!src) return;
+
+      const replaceImg = function (svgText) {
+      // Приводим к строке на случай XML Document
+        const text = typeof svgText === 'string' ? svgText : new XMLSerializer().serializeToString(svgText);
+        const $svg = $(text.trim()).filter('svg');
+        if (!$svg.length) return;
+
+        if ($img.attr('class')) $svg.attr('class', $img.attr('class'));
+        $svg.attr('aria-hidden', 'true');
+
+        $img.replaceWith($svg);
+      };
+
+      if (svgCache[src]) {
+        replaceImg(svgCache[src]);
+      } else {
+        $.ajax({
+          url: src,
+        dataType: 'text',      // ← ключевой момент
+        cache: true
+      })
+        .done(function (data) {
+          svgCache[src] = data;
+          replaceImg(data);
+        })
+        .fail(function () {
+          console.warn('Не удалось загрузить SVG:', src);
+        });
+      }
+    });
+  });
 
   $('.accordion-header').toggleClass('inactive-header');
   $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');

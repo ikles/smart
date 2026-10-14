@@ -20,18 +20,18 @@
 
 
 .rcpadding {  
-  padding-right: calc((100% - 1600px)/2);
+  padding-right: calc((100vw - 1600px)/2);
   @media only screen and (max-width : 1199px) {    
-    padding-right: calc((100% - 970px)/2);
+    padding-right: calc((100vw - 970px)/2);
   }
   @media only screen and (max-width : 991px) {    
-    padding-right: calc((100% - 750px)/2);
+    padding-right: calc((100vw - 750px)/2);
   }
   @media only screen and (max-width : 767px) {    
-    padding-right: calc((100% - 600px)/2);
+    padding-right: calc((100vw - 600px)/2);
   }
   @media only screen and (max-width : 640px) {    
-    padding-right: calc((100% - 530px)/2);
+    padding-right: calc((100vw - 530px)/2);
   }
   @media only screen and (max-width : 570px) {    
     padding-right: 15px;

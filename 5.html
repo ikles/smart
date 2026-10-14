@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5. Генеральный подряд</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    <main class="main">
+      <div class="head__banner">
+        <div class="contain">
+          <nav class="bread" aria-label="Хлебные крошки">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li><a href="">Услуги</a></li>
+              <li>Генеральный подряд</li>
+            </ul>            
+          </nav>
+          <h1 class="head__title">Генеральный <br> подряд</h1>
+        </div>
+      </div>
+
+      <div class="general">        
+        <div class="general__row">
+          <div class="general__l-img">
+            <img src="./img/general.jpg" alt="">
+          </div>
+          <div class="general__r-txt">
+            <h1 class="h2">Генеральный подряд — это полная ответственность за ваш проект</h1>
+            <p>Генеральный подряд — это комплексное управление  строительным проектом, при котором мы берём на себя полную  ответственность за организацию и выполнение всех строительно-монтажных  работ, координацию субподрядчиков, соблюдение сроков и бюджета.</p>
+            <p>СМАРТСТРОЙ выступает единым центром ответственности  для заказчика. Вам не нужно координировать десятки подрядчиков — мы  делаем это за вас. От первого чертежа до передачи ключей.</p>
+            <p>Наша команда из 100+ специалистов и собственный парк  техники позволяют выполнять проекты любой сложности в установленные  сроки и с неизменно высоким качеством.</p>
+          </div>          
+        </div>
+      </div>
+      <section class="s-values">
+        <div class="contain">
+          <h2>Почему выгодно работать с генподрядчиком</h2>
+          <p class="subtitle">Ключевые преимущества для вашего бизнеса</p>
+          <div class="cycle__grid cycle__grid--values">
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/contractor__icon-1.svg",
+              "title":"Единый центр ответственности",
+              "txt":"Вы взаимодействуете с одной компанией, а не с десятком субподрядчиков. Все вопросы решаем мы."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/contractor__icon-2.svg",
+              "title":"Фиксированная смета",
+              "txt":"Стоимость работ фиксируется в договоре. Никаких неожиданных доплат и скрытых расходов."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/contractor__icon-3.svg",
+              "title":"Соблюдение сроков",
+              "txt":"Календарный график соблюдается за счёт собственной техники и штатных специалистов — мы не зависим от внешних подрядчиков."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/contractor__icon-4.svg",
+              "title":"Контроль качества",
+              "txt":"Многоступенчатый контроль на всех этапах строительства. Соответствие нормативам и стандартам."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/contractor__icon-5.svg",
+              "title":"Собственная техника",
+              "txt":"Парк из 12+ единиц спецтехники. Никаких простоев из-за аренды — мы полностью автономны."
+            })
+            @@include('var/_cycle-card-static.html',{
+              "cls":"",
+              "img":"./img/contractor__icon-6.svg",
+              "title":"Гарантийные обязательства",
+              "txt":"Гарантия на все выполненные работы зафиксирована в договоре. Остаёмся на связи после сдачи объекта."
+            })            
+          </div>
+        </div>
+      </section>
+      <section class="s-what">
+        <div class="contain">
+          <h2>Что мы строим</h2>
+          <p class="subtitle">Направления строительства в рамках генерального подряда</p>
+          <div class="what__row">
+            <div class="what__item">
+              <div class="what__icon"><img src="./img/what-1.png" alt=""></div>
+              <div class="what__content">
+                <div class="what__title">Производственные здания</div>
+                <div class="what__txt">Цеха, ангары, производственные корпуса и  технологические линии. Строительство с учётом специфики производства и  отраслевых требований.</div>
+              </div>
+            </div>
+
+
+            <div class="what__item">
+              <div class="what__icon"><img src="./img/what-2.png" alt=""></div>
+              <div class="what__content">
+                <div class="what__title">Промышленные площадки</div>
+                <div class="what__txt">Комплексное строительство промышленных зон, включая инфраструктуру, подъездные пути и инженерные сети.</div>
+              </div>
+            </div>          
+            <div class="what__item">
+              <div class="what__icon"><img src="./img/what-3.png" alt=""></div>
+              <div class="what__content">
+                <div class="what__title">Складские комплексы</div>
+                <div class="what__txt">Склады класса А и B, логистические центры, распределительные хабы. Быстровозводимые конструкции и капитальное строительство.</div>
+              </div>
+            </div>          
+            <div class="what__item">
+              <div class="what__icon"><img src="./img/what-4.png" alt=""></div>
+              <div class="what__content">
+                <div class="what__title">Заводы</div>
+                <div class="what__txt">Полный цикл строительства заводских комплексов.</div>
+              </div>
+            </div>          
+            <div class="what__item">
+              <div class="what__icon"><img src="./img/what-5.png" alt=""></div>
+              <div class="what__content">
+                <div class="what__title">Коммерческие здания</div>
+                <div class="what__txt">Торговые центры, бизнес-центры, офисные здания. Современные архитектурные решения и комфортные общественные пространства.</div>
+              </div>
+            </div>          
+            <div class="what__item">
+              <div class="what__icon"><img src="./img/what-6.png" alt=""></div>
+              <div class="what__content">
+                <div class="what__title">Административно-общественные здания</div>
+                <div class="what__txt">Торговые центры, бизнес-центры, офисные здания. Современные архитектурные решения и комфортные общественные пространства.</div>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </section>
+      @@include('var/_s-site-cta.html')
+    </main>
+    @@include('var/_footer.html')    
+  </div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+
