@@ -175,25 +175,30 @@
               <label class="feedback__label" for="fb-message">Сопроводительное письмо</label>
               <textarea class="feedback__textarea" id="fb-message" name="message" placeholder="Кратко расскажите о своём опыте и почему хотите работать в Смартсрой ..."></textarea>
             </div>
+            <div class="feedback__field">
+              <label class="feedback__label">Прикрепить резюме</label>
 
-
-
-            
+              <div class="addform_file-label__w">
+                <label class="addform_file-label">
+                  <input size="40" accept=".html,.html,.pdf,.docx,.doc,.xls,.xlsx,.txt,.jpg,.jpeg,.png"
+                  class="multi-file-input" type="file" id="fileMulti" aria-invalid="false">
+                  <span>обзор</span>
+                </label>
+                <div class="img_wrapper">
+                  Файл не выбран
+                </div>
+              </div>          
+            </div>
             <div class="feedback__consent">
               <label class="feedback__check-label">
                 <input type="checkbox" name="confirm" checked>
                 <span>Я согласен на обработку персональных данных и принимаю условия политики конфиденциальности</span>
               </label>                             
             </div>
-            <button class="feedback__btn btn w100" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+            <button class="feedback__btn btn w100" type="submit"><i class="download"></i>Отправить отклик</button>
           </form>
         </div>
       </section>
-
-
-      
-
-
     </main>
     @@include('var/_footer.html')    
   </div>

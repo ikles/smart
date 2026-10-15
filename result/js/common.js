@@ -22,6 +22,20 @@ jQuery(document).ready(function( $ ) {
   });
 
 
+  $('[data-fancybox="gallery-1"]').fancybox({
+    arrows: true,
+    infobar: false,
+    smallBtn: true,
+    toolbar: false,
+    iframe : {
+      css : {
+        width : '950px'
+      }
+    },    
+    slideClass: "myClass",
+    baseClass: "myclass"
+  });
+
   
   $('.pagination-more__w .btn').on('click', function(e) {
     var $btn = $(this);
@@ -270,24 +284,30 @@ jQuery(document).ready(function( $ ) {
     });
   });
 
-  $('.accordion-header').toggleClass('inactive-header');
-  $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-  $('.accordion-content').first().slideDown().toggleClass('open-content');
-  $('.accordioon-content').first().slideDown().toggleClass('open-content');
-  $('.accordion-header').click(function () {
-    if($(this).is('.inactive-header')) {
-      $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
-      $(this).toggleClass('active-header').toggleClass('inactive-header');
-      $(this).next().slideToggle().toggleClass('open-content');
-    }
+  let inputFile = document.querySelector('#fileMulti');
+  let imgWrapper = document.querySelector('.img_wrapper');
 
-    else {
-      $(this).toggleClass('active-header').toggleClass('inactive-header');
-      $(this).next().slideToggle().toggleClass('open-content');
-    }
-  });
 
-  return false;
+  function download2(input) {
+    let file = input.files[0];
+
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+/*  reader.onload = function () {    
+imgWrapper.innerHTML = file.name;
+}*/
+    reader.onload = ev => {
+      const src = ev.target.result
+      imgWrapper.innerHTML = `${file.name}`
+    }
+  }
+
+
+  if ($('#fileMulti').length) {
+    inputFile.addEventListener("change", function () {
+      download2(this);
+    });
+  }
 
 }); //ready
 
