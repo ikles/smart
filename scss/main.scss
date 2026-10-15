@@ -934,7 +934,7 @@ h1,
 }
 
 .hero__conuts {
-  margin-top: 30px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 42px;  
@@ -951,7 +951,7 @@ h1,
         content: "+";
       }
       @media (max-width : 640px) {
-        font-size: 28px;
+        
       }
     }
     span {
@@ -961,7 +961,7 @@ h1,
       text-transform: uppercase;
       color: #fff;
       @media (max-width : 640px) {
-        font-size: 12px;
+        
       }
     }
   }
@@ -2629,96 +2629,13 @@ textarea:focus {
 }
 
 @media (max-width: 1199px) {
-  .job-sec {
-    padding: 40px 32px;
-  }
+
 }
 
 @media (max-width: 991px) {
-  .job-sec {
-    padding: 40px 28px;
-  }
 
-  .job-sec__text {
-    max-width: 100%;
-  }
 }
 
-@media (max-width: 767px) {
-  .job-sec {
-    padding: 32px 24px;
-  }
-
-  .job-sec__title {
-    font-size: 20px;
-  }
-
-  .job-sec__price {
-    font-size: 18px;
-  }
-
-  .job-sec__text {
-    font-size: 14px;
-  }
-
-
-  .job-sec__tag {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .job-sec__tag-ico {
-    width: 14px;
-    height: 14px;
-  }
-
-  .job-sec__badge {
-    top: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 575px) {
-  .job-sec {
-    padding: 28px 20px;
-  }
-
-  .job-sec__title {
-    font-size: 18px;
-  }
-
-  .job-sec__price {
-    font-size: 16px;
-  }
-
-  .job-sec__btn {
-    padding: 11px 18px;
-  }
-}
-
-@media (max-width: 375px) {
-  .job-sec__title {
-    font-size: 16px;
-  }
-
-  .job-sec__badge {
-    top: 12px;
-    right: 12px;
-    width: 34px;
-    height: 34px;
-    font-size: 10px;
-  }
-
-  .job-sec__tag {
-    padding: 7px 10px;
-  }
-
-  .job-sec__tags {
-    gap: 8px;
-  }
-}
 
 
 .s-history {
@@ -2735,9 +2652,23 @@ textarea:focus {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 540px 44px 600px;
+  grid-template-columns: 540px 24px 600px;
   align-items: center;  
   gap: 103px;
+  &:last-child {
+    .timeline-dot {
+      &:after {
+        display: none;
+      }
+    } 
+  }  
+  &:first-child {
+    .timeline-dot {
+      &:after {
+       background-color: #52BBB5; 
+     }
+   } 
+ }  
 }
 
 
@@ -2752,9 +2683,6 @@ textarea:focus {
     height: auto;
   }
 }
-
-
-
 
 
 
@@ -2781,9 +2709,7 @@ textarea:focus {
 
 }
 
-.timeline-line {
 
-}
 
 .timeline-dot {
   display: inline-flex;
@@ -2791,6 +2717,7 @@ textarea:focus {
   height: 24px;
   border-radius: 50%;
   background-color: rgba(26, 44, 69, 0.3);
+  background-color: #bbc0c8;
   position: relative;
   &:before {
     content: "";
@@ -2803,6 +2730,17 @@ textarea:focus {
     height: calc(100% + 20px);    
     border-radius: 100%;    
     border: 2px solid rgba(26, 44, 69, 0.3);
+  }
+  &:after {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    content: "";
+    display: block;
+    background-color: rgba(26, 44, 69, 0.3);
+    width: 1px;
+    height: 742px;
   } 
   &.active {
     background-color: #52BBB5;
@@ -3108,7 +3046,7 @@ textarea:focus {
   padding-bottom: 140px;
   padding-right: calc((1920px - 1600px)/2);
   @media only screen and (max-width : 1630px) {    
-    padding-right: calc((100vw - 1200px)/2);
+    padding-right: calc((100vw - 1170px)/2);
   }
   @media only screen and (max-width : 1199px) {    
     padding-right: calc((100vw - 970px)/2);
@@ -3430,7 +3368,10 @@ textarea:focus {
   background-color: #1A2C45;  
   @media (min-width : 768px) {
     padding-top: 0;
+  }
+  @media (min-width : 1200px) {
     padding-bottom: 222px;
+    
   }
   h2, .h2 {
     color: #fff;
@@ -3563,7 +3504,7 @@ textarea:focus {
 
 .general__l-img {  
   flex: none;
-  aspect-ratio: 1,0650 / 1;
+  aspect-ratio: 1.0650 / 1;
   width: 47.44% ;
   img {
     object-fit: cover;
@@ -3579,7 +3520,7 @@ textarea:focus {
   padding-bottom: 40px;  
   padding-right: calc((1920px - 1600px)/2);
   @media only screen and (max-width : 1630px) {    
-    padding-right: calc((100vw - 1200px)/2);
+    padding-right: calc((100vw - 1170px)/2);
   }
   @media only screen and (max-width : 1199px) {    
     padding-right: calc((100vw - 970px)/2);
@@ -3726,7 +3667,8 @@ textarea:focus {
 
 .feedback__check-label {
   display: flex;
-  cursor: pointer;  
+  cursor: pointer;
+  
   input[type="checkbox"] {
     display: none;
     + span {
