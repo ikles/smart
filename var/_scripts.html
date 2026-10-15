@@ -1,3 +1,16 @@
+<div class="cookies">
+  <div class="cookies__content">
+    <div class="cookies__img">    
+    </div>
+    <div class="cookies__text">
+      Этот сайт использует файлы cookies и сервисы сбора технических данных  посетителей (данные об IP-адресе, местоположении и др.) для обеспечения  работоспособности и улучшения качества обслуживания. Продолжая  использовать наш сайт, вы автоматически соглашаетесь с использованием  данных технологий.
+    </div>
+  </div>
+  <button class="btn cookies__btn">
+    Принимаю
+  </button>
+</div>
+
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.js"></script>
 <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<e28ccc70-b9f5-4f7b-aec4-03bab1133076>" type="text/javascript"></script>
@@ -6,4 +19,10 @@
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/dynamic_adapt.js"></script>
-  <script src="js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', ()=> {
+     AOS.init();     
+   }) 
+ </script>
+ <script src="js/common.js"></script>

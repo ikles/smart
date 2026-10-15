@@ -21,12 +21,41 @@ jQuery(document).ready(function( $ ) {
     $('.header__col').toggleClass("open");    
   });
 
+  $('.head__city').click(function (e) {
+    e.preventDefault();
+    $('.search-modal').slideToggle();
+  });
+
+  $('.search-modal__close').click(function () {
+    $('.search-modal').slideUp();
+  });
+  
+
+    // Функция для управления cookie-уведомлением
+  const $cookieBanner = $('.cookies');
+  const $acceptButton = $('.cookies__btn');
+  const STORAGE_KEY = 'cookie_consent_accepted_smart_1';
+
+  if (!localStorage.getItem(STORAGE_KEY)) {
+    setTimeout(() => {
+      $cookieBanner.addClass('show');
+    }, 500);
+  }
+
+  $acceptButton.on('click', function() {
+    $cookieBanner.removeClass('show');
+    localStorage.setItem(STORAGE_KEY, 'true');
+  });
+
+  $('.accept__close').click(function () {
+    $('.cookies').removeClass('show');
+  });
 
   $('[data-fancybox="gallery-1"]').fancybox({
     arrows: true,
     infobar: false,
     smallBtn: true,
-    toolbar: false,
+    toolbar: true,
     iframe : {
       css : {
         width : '950px'
@@ -309,5 +338,67 @@ imgWrapper.innerHTML = file.name;
     });
   }
 
+
+
+
+  setTimeout(function() {
+    $('.counter').each(function() {
+      var $this = $(this);
+      var target = parseInt($this.data('target'));
+      var formatted = $this.data('formatted') === true;
+      var duration = 3000; // длительность анимации в мс
+      var startTime = null;
+
+      function animate(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        
+        // easeOutQuad для более плавного замедления в конце
+        var eased = 1 - Math.pow(1 - progress, 2);
+        var current = Math.floor(eased * target);
+
+        if (formatted) {
+          $this.text(current.toLocaleString('ru-RU').replace(/,/g, ' '));
+        } else {
+          $this.text(current);
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          if (formatted) {
+            $this.text(target.toLocaleString('ru-RU').replace(/,/g, ' '));
+          } else {
+            $this.text(target);
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    });
+  }, 500);
+  
+
+  $(function () {
+    var $header = $('.header');
+    var lastScrollTop = 0;
+    var delta = 160;
+
+    $(window).on('scroll', function () {
+      var scrollTop = $(this).scrollTop();
+
+        if (Math.abs(lastScrollTop - scrollTop) <= 5) return; // игнорим мелкие дрожания
+
+        if (scrollTop > lastScrollTop && scrollTop > delta) {
+            // Скролл ВНИЗ и прошли 40px — прячем
+          $header.css('transform', 'translateY(-100%)');
+        } else if (scrollTop < lastScrollTop) {
+            // Скролл ВВЕРХ — показываем
+          $header.css('transform', 'translateY(0)');
+        }
+
+        lastScrollTop = scrollTop;
+      });
+  });
 }); //ready
 

@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/slick.css">
 <link rel="stylesheet" href="css/select2.min.css">
 <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,7 +26,7 @@
 
   <div class="wrapper">
     <header class="header">
-  <div class="contain">
+  <div class="header__contain contain">
     <div class="head__row">
       <a href="./index.html" class="head__logo"><img src="img/logo-head.svg"></a>
       <a href="" class="head__city">
@@ -43,7 +44,92 @@
           <li><a href="">Контакты</a></li>
         </ul>
       </div>
-        <a href="tel:8 (4822) 32-20-10" class="top__tel">8 (4822) 32-20-10</a>
+      <a href="tel:8 (4822) 32-20-10" class="top__tel">8 (4822) 32-20-10</a>
+    </div>
+
+
+  </div>
+  <div class="search-modal">
+    <button class="search-modal__close">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.84095 0.659004C2.96228 -0.219668 1.53768 -0.219668 0.659004 0.659004C-0.219668 1.53767 -0.219668 2.96228 0.659004 3.84095L14.8181 18L0.659004 32.159C-0.219667 33.0377 -0.219668 34.4623 0.659004 35.341C1.53768 36.2197 2.96228 36.2197 3.84095 35.341L18 21.1819L32.1587 35.3407C33.0374 36.2193 34.462 36.2193 35.3407 35.3407C36.2193 34.462 36.2193 33.0374 35.3407 32.1587L21.182 18L35.3407 3.84129C36.2193 2.96262 36.2193 1.53801 35.3407 0.659343C34.462 -0.219328 33.0374 -0.219328 32.1587 0.659343L18 14.8181L3.84095 0.659004Z" fill="white" />
+      </svg>
+    </button>
+    <div class="search-modal__inn">
+      <div class="search-modal__form-w">
+        <div class="search-modal__form-lbl">Поиск по городу</div>
+        <form class="search-modal__form">
+          <input class="search-modal__input" type="text" placeholder="Тверь">
+        </form>
+      </div>
+      <div class="search-modal__wrap">
+        <ul>
+          <li><a href="">Апрелевка</a></li>
+          <li><a href="">Видное</a></li>
+          <li><a href="">Дедовск</a></li>
+          <li><a href="">Домодедово</a></li>
+          <li><a href="">Зарайск</a></li>
+          <li><a href="">Кашира</a></li>
+          <li><a href="">Красноармейск</a></li>
+          <li><a href="">Лобня</a></li>
+          <li><a href="">Люберцы</a></li>
+          <li><a href="">Наро-Фоминск</a></li>
+          <li><a href="">Орехово-Зуево</a></li>
+          <li><a href="">Пушкино</a></li>
+          <li><a href="">Руза</a></li>
+          <li><a href="">Старая Купавна</a></li>
+          <li><a href="">Химки</a></li>
+          <li><a href="">Шатура</a></li>              
+          <li><a href="">Балашиха</a></li>
+          <li><a href="">Волоколамск</a></li>
+          <li><a href="">Дзержинский</a></li>
+          <li><a href="">Дубна</a></li>
+          <li><a href="">Звенигород</a></li>
+          <li><a href="">Клин</a></li>
+          <li><a href="">Красногорск</a></li>
+          <li><a href="">Лосино-Петровский</a></li>
+          <li><a href="">Можайск</a></li>
+          <li><a href="">Нахабино</a></li>
+          <li><a href="">Павловский Посад</a></li>
+          <li><a href="">Пущино</a></li>
+          <li><a href="">Сергиев Посад</a></li>
+          <li><a href="">Ступино</a></li>
+          <li><a href="">Хотьково</a></li>
+          <li><a href="">Щелково</a></li>            
+          <li><a href="">Белоозерский</a></li>
+          <li><a href="">Воскресенск</a></li>
+          <li><a href="">Дмитров</a></li>
+          <li><a href="">Егорьевск</a></li>
+          <li><a href="">Ивантеевка</a></li>
+          <li><a href="">Коломна</a></li>
+          <li><a href="">Краснознаменск</a></li>
+          <li><a href="">Луховицы</a></li>
+          <li><a href="">Москва</a></li>
+          <li><a href="">Ногинск</a></li>
+          <li><a href="">Подольск</a></li>
+          <li><a href="">Раменское</a></li>
+          <li><a href="">Серпухов</a></li>
+          <li><a href="">Тверь</a></li>
+          <li><a href="">Черноголовка</a></li>
+          <li><a href="">Электросталь</a></li>            
+          <li><a href="">Бронницы</a></li>
+          <li><a href="">Голицыно</a></li>
+          <li><a href="">Долгопрудный</a></li>
+          <li><a href="">Жуковский</a></li>
+          <li><a href="">Истра</a></li>
+          <li><a href="">Королёв</a></li>
+          <li><a href="">Кубинка</a></li>
+          <li><a href="">Лыткарино</a></li>
+          <li><a href="">Мытищи</a></li>
+          <li><a href="">Одинцово</a></li>
+          <li><a href="">Протвино</a></li>
+          <li><a href="">Реутов</a></li>
+          <li><a href="">Солнечногорск</a></li>
+          <li><a href="">Фрязино</a></li>
+          <li><a href="">Чехов</a></li>
+          <li><a href="">Электроугли</a></li>
+        </ul>          
+      </div>
     </div>
   </div>
 </header>    
@@ -128,6 +214,19 @@
 </div>
 <!--wrapper-->
 
+<div class="cookies">
+  <div class="cookies__content">
+    <div class="cookies__img">    
+    </div>
+    <div class="cookies__text">
+      Этот сайт использует файлы cookies и сервисы сбора технических данных  посетителей (данные об IP-адресе, местоположении и др.) для обеспечения  работоспособности и улучшения качества обслуживания. Продолжая  использовать наш сайт, вы автоматически соглашаетесь с использованием  данных технологий.
+    </div>
+  </div>
+  <button class="btn cookies__btn">
+    Принимаю
+  </button>
+</div>
+
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.js"></script>
 <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<e28ccc70-b9f5-4f7b-aec4-03bab1133076>" type="text/javascript"></script>
@@ -136,7 +235,13 @@
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/dynamic_adapt.js"></script>
-  <script src="js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', ()=> {
+     AOS.init();     
+   }) 
+ </script>
+ <script src="js/common.js"></script>
 </body>
 </html>
 
