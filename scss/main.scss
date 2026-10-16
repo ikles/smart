@@ -61,6 +61,10 @@ body {
   }
 }
 
+.mob-top__tel,
+.burger-w {
+  display: none;
+}
 
 ////select2
 
@@ -738,6 +742,10 @@ img.sg-wrap--right {
   justify-content: space-between;
 }
 
+.header__col {
+  display: contents;
+}
+
 .head__logo {
   display: inline-flex;
   align-items: center;
@@ -781,6 +789,7 @@ img.sg-wrap--right {
 
 
 .head__mnu {
+  margin-top: 12px;
   ul {
     display: flex;
     gap: 60px;
@@ -835,6 +844,8 @@ img.sg-wrap--right {
   text-align: right;
   text-transform: uppercase;
   color: #1a1b26;
+  display: inline-flex;
+  align-items: center;
   &:hover {
     text-decoration: none;
   }
@@ -920,6 +931,18 @@ h1,
   font-weight: 700;
   font-size: 74px;  
   color: #1A1B26;
+  @media (max-width : 1199px) {
+    font-size: 60px;
+  }
+  @media (max-width : 991px) {
+    font-size: 55px;
+  }
+  @media (max-width : 767px) {
+    font-size: 44px;
+  }
+  @media (max-width : 640px) {
+    font-size: 32px;
+  }
 }
 
 .hero__subtitle {
@@ -951,7 +974,7 @@ h1,
         content: "+";
       }
       @media (max-width : 640px) {
-        
+
       }
     }
     span {
@@ -961,7 +984,7 @@ h1,
       text-transform: uppercase;
       color: #fff;
       @media (max-width : 640px) {
-        
+
       }
     }
   }
@@ -1580,35 +1603,39 @@ form button {
     transform: rotate(180deg);
   }
   .slick-dots {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;    
-    justify-content: center;
-    z-index: 11;
-    gap: 15px;
-    li {
+    bottom: 20px;    
+  }
+} 
+
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;    
+  justify-content: center;
+  z-index: 11;
+  gap: 15px;
+  li {
+    font-size: 0;
+    background: none;
+    padding: 0;      
+    button {
+      padding: 0;
       font-size: 0;
-      background: none;
-      padding: 0;      
+      outline: none;
+      border: none;
+      width: 12px;
+      height: 12px;        
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
+    &.slick-active {
       button {
-        padding: 0;
-        font-size: 0;
-        outline: none;
-        border: none;
-        width: 12px;
-        height: 12px;        
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-      }
-      &.slick-active {
-        button {
-          background: #52bbb5;
-        }
+        background: #52bbb5;
       }
     }
   }
-} 
+}
 
 
 
@@ -3178,12 +3205,36 @@ textarea:focus {
   text-align: center;  
   transition: 0.3s;
   transform: translateY(0);
+  position: relative;
   @media (any-hover: hover) {
     &:hover {
       transform: translateY(-2px);      
       background-color: #E6E6E6;
     }
   }
+}
+
+.wu__card::before,
+.wu__card::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.wu__card::before {
+  left: 10px;
+  border-width: 30px 30px 0 0;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Правый верхний треугольник */
+.wu__card::after {
+  right: 10px;
+  border-width: 0 30px 30px 0;
+  border-color: transparent #fff transparent transparent;
 }
 
 .wu__icon {
@@ -3459,6 +3510,28 @@ textarea:focus {
   overflow: hidden;
   border-radius: 6px;
   aspect-ratio: 0.704 / 1;
+  position: relative;
+  &:before {
+    opacity: 0;
+    visibility: hidden;   
+    transition: 0.33s;
+    content: "";
+    display: block;        
+    background: rgba(26, 44, 69, 0.5) url("../img/plus-glass.svg") no-repeat center;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }  
+    }
+  }
   img {  
     object-fit: cover;
     max-width: 100%;
@@ -3486,7 +3559,7 @@ textarea:focus {
     top: 2px;
     content: "";
     display: block;
-    width: 22px;
+    width: 24px;
     height: 24px;
     background: url("../img/dwnl.svg") no-repeat center;
   }

@@ -1,11 +1,49 @@
+.sg-sec p,
 .partner__left,
 .general__r-txt p,
 .project__content p,
- .about-project__content p {
-   font-size: 14px;
-   margin-bottom: 10px;
- }
+.about-project__content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
- .project__inner {
-   gap: 20px;
- }
+.sg-sec ol li, .sg-sec ul li {
+  font-size: 14px;
+}
+.sg-note-title {
+  font-size: 16px;
+}
+.sg-cap {
+  font-size: 12px;
+}
+
+.sg-sec {
+  .h2, h2 {
+    margin-bottom: 20px;
+  }
+  h3,
+  .h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.project__inner {
+  gap: 20px;
+}
+
+.feedback__title2 {
+  font-size: 28px;
+}
+
+.feedback__checks {  
+  flex-direction: column;
+}
+
+.privacy__title {
+  font-size: 28px;
+  word-wrap: break-word;
+}
+.privacy__box {
+  padding: 20px;
+} 

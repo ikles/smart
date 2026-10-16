@@ -16,6 +16,7 @@ jQuery(document).ready(function( $ ) {
 
 
   $('.burger').click(function () {
+    $(this).closest('.head__row').toggleClass('header-open');
     $(this).toggleClass('burger-open');
     $('body').toggleClass("body-open");
     $('.header__col').toggleClass("open");    
@@ -119,8 +120,61 @@ jQuery(document).ready(function( $ ) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    responsive: [
+
+      {
+        breakpoint: 991,
+        settings: {
+          dots: true,
+        }
+      },
+    ]
   });
+
+    (function () {
+      const selector = '.licenses__grid';
+      let isSlick = false;
+
+      function initSlick() {
+        const $el = $(selector);
+        if (isSlick || !$el.length) return;
+        $el.slick({
+          arrows: false,
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+        });
+        isSlick = true;
+      }
+
+      function destroySlick() {
+        const $el = $(selector);
+        if (!isSlick || !$el.length) return;
+        $el.slick('unslick');
+        isSlick = false;
+      }
+
+      function handleResize() {
+        if (window.innerWidth < 768) {
+          initSlick();
+        } else {
+          destroySlick();
+        }
+      }
+
+      $(document).ready(function () {
+        handleResize();
+      });
+
+      let resizeTimer;
+      $(window).on('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(handleResize, 200);
+      });
+    })();
 
   // Кнопки навигации
     $('.projects__ctrl-prev').on('click', function () {

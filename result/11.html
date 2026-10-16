@@ -29,22 +29,28 @@
   <div class="header__contain contain">
     <div class="head__row">
       <a href="./index.html" class="head__logo"><img src="img/logo-head.svg"></a>
-      <a href="" class="head__city">
-        <div class="head__city-icon">
-          <img src="img/icon-city.svg">
+      <div class="header__col">
+        <a href="" class="head__city">
+          <div class="head__city-icon">
+            <img src="img/icon-city.svg">
+          </div>
+          <span>г. Тверь</span>
+        </a>
+        <div class="head__mnu">
+          <ul>
+            <li><a href="" class="active">Компания</a></li>
+            <li><a href="">Услуги</a></li>
+            <li><a href="">Портфолио</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
         </div>
-        <span>г. Тверь</span>
-      </a>
-      <div class="head__mnu">
-        <ul>
-          <li><a href="" class="active">Компания</a></li>
-          <li><a href="">Услуги</a></li>
-          <li><a href="">Портфолио</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>
+        <a  href="tel:8 (4822) 32-20-10" class="mob-top__tel show-1199">8 (4822) 32-20-10</a>
       </div>
       <a href="tel:8 (4822) 32-20-10" class="top__tel">8 (4822) 32-20-10</a>
+      <span class="burger-w">
+        <span class="burger"></span>
+      </span>
     </div>
 
 
@@ -258,26 +264,32 @@
             </thead>
             <tbody>
               <tr>
-                <td>Ремонтные работы автосалона «АЗАДА», «ЛЕКУС», «КЕНЗА»</td>
-                <td>2 710,80</td>
-                <td>16.03.2021</td>
-                <td>03.10.2021</td>
-                <td><span class="sg-status sg-status--ok">завершен</span></td>
+                <td data-label="Наименование работ">Ремонтные работы автосалона «АЗАДА», «ЛЕКУС», «КЕНЗА»</td>
+                <td data-label="Площадь, м²">2 710,80</td>
+                <td data-label="Начало">16.03.2021</td>
+                <td data-label="Окончание">03.10.2021</td>
+                <td data-label="Статус"><span class="sg-status sg-status--ok">завершен</span></td>
               </tr>
               <tr>
-                <td>Строительство производственно-офисного корпуса</td>
-                <td>2 400,00</td><td>27.03.2021</td><td>30.04.2025</td>
-                <td><span class="sg-status sg-status--ok">завершен</span></td>
+                <td data-label="Наименование работ">Строительство производственно-офисного корпуса</td>
+                <td data-label="Площадь, м²">2 400,00</td>
+                <td data-label="Начало">27.03.2021</td>
+                <td data-label="Окончание">30.04.2025</td>
+                <td data-label="Статус"><span class="sg-status sg-status--ok">завершен</span></td>
               </tr>
               <tr>
-                <td>Реконструкция ТРЦ «Луби-2»</td>
-                <td>5 300,00</td><td>10.01.2023</td><td>15.03.2024</td>
-                <td><span class="sg-status sg-status--ok">завершен</span></td>
+                <td data-label="Наименование работ">Реконструкция ТРЦ «Луби-2»</td>
+                <td data-label="Площадь, м²">5 300,00</td>
+                <td data-label="Начало">10.01.2023</td>
+                <td data-label="Окончание">15.03.2024</td>
+                <td data-label="Статус"><span class="sg-status sg-status--ok">завершен</span></td>
               </tr>
               <tr>
-                <td>Строительство складского комплекса класса А</td>
-                <td>7 200,00</td><td>01.06.2025</td><td>15.02.2026</td>
-                <td><span class="sg-status sg-status--err">в работе</span></td>
+                <td data-label="Наименование работ">Строительство складского комплекса класса А</td>
+                <td data-label="Площадь, м²">7 200,00</td>
+                <td data-label="Начало">01.06.2025</td>
+                <td data-label="Окончание">15.02.2026</td>
+                <td data-label="Статус"><span class="sg-status sg-status--err">в работе</span></td>
               </tr>
             </tbody>
           </table>
@@ -301,7 +313,7 @@
           </div>
 
           <div class="sg-note sg-note--tech">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg data-da=".sg-note--tech,.sg-note-title,640,0" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="36" cy="36" r="36" fill="#1A2C45" />
               <path d="M31.3316 25.1113H28.2205C27.3954 25.1113 26.604 25.4391 26.0206 26.0226C25.4372 26.606 25.1094 27.3973 25.1094 28.2224V46.8891C25.1094 47.7142 25.4372 48.5055 26.0206 49.089C26.604 49.6724 27.3954 50.0002 28.2205 50.0002H43.776C44.6012 50.0002 45.3925 49.6724 45.9759 49.089C46.5594 48.5055 46.8872 47.7142 46.8872 46.8891V28.2224C46.8872 27.3973 46.5594 26.606 45.9759 26.0226C45.3925 25.4391 44.6012 25.1113 43.776 25.1113H40.6649" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M31.332 25.1111C31.332 24.286 31.6598 23.4947 32.2433 22.9112C32.8267 22.3278 33.618 22 34.4431 22H37.5543C38.3794 22 39.1707 22.3278 39.7541 22.9112C40.3376 23.4947 40.6654 24.286 40.6654 25.1111C40.6654 25.9362 40.3376 26.7276 39.7541 27.311C39.1707 27.8944 38.3794 28.2222 37.5543 28.2222H34.4431C33.618 28.2222 32.8267 27.8944 32.2433 27.311C31.6598 26.7276 31.332 25.9362 31.332 25.1111Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -452,81 +464,93 @@
 
             <div class="msg msg--success">
               <div class="msg__body">
-                <span class="msg__icon">
-                  <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.25 13.75L15.5 19L29.5 5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M29.5 15.5V26C29.5 26.9283 29.1313 27.8185 28.4749 28.4749C27.8185 29.1313 26.9283 29.5 26 29.5H5C4.07174 29.5 3.1815 29.1313 2.52513 28.4749C1.86875 27.8185 1.5 26.9283 1.5 26V5C1.5 4.07174 1.86875 3.1815 2.52513 2.52513C3.1815 1.86875 4.07174 1.5 5 1.5H20.75" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <div class="msg__title">Заявка успешно отправлена!</div>
+                <div class="msg__top">
+                  <span class="msg__icon">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.25 13.75L15.5 19L29.5 5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M29.5 15.5V26C29.5 26.9283 29.1313 27.8185 28.4749 28.4749C27.8185 29.1313 26.9283 29.5 26 29.5H5C4.07174 29.5 3.1815 29.1313 2.52513 28.4749C1.86875 27.8185 1.5 26.9283 1.5 26V5C1.5 4.07174 1.86875 3.1815 2.52513 2.52513C3.1815 1.86875 4.07174 1.5 5 1.5H20.75" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="msg__title">Заявка успешно отправлена!</div>
+                </div>
                 <div class="msg__text">Мы свяжем с вами в ближайшее время. Номер вашей заявки: #SM-2025-0482. Пожалуйста, сохраните его для уточнения статуса.</div>
               </div>
             </div>
 
             <div class="msg msg--success">
               <div class="msg__body">
-                <span class="msg__icon">
-                  <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.9444 23.2778H4.61111C3.78599 23.2778 2.99467 22.95 2.41122 22.3666C1.82778 21.7831 1.5 20.9918 1.5 20.1667V4.61111C1.5 3.78599 1.82778 2.99467 2.41122 2.41122C2.99467 1.82778 3.78599 1.5 4.61111 1.5H26.3889C27.214 1.5 28.0053 1.82778 28.5888 2.41122C29.1722 2.99467 29.5 3.78599 29.5 4.61111V13.9444" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M1.5 4.61133L15.5 13.9447L29.5 4.61133" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20.168 23.2781L23.2791 26.3892L29.5013 20.167" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <div class="msg__title">Письмо отправлено!</div>
+                <div class="msg__top">
+                  <span class="msg__icon">
+                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.9444 23.2778H4.61111C3.78599 23.2778 2.99467 22.95 2.41122 22.3666C1.82778 21.7831 1.5 20.9918 1.5 20.1667V4.61111C1.5 3.78599 1.82778 2.99467 2.41122 2.41122C2.99467 1.82778 3.78599 1.5 4.61111 1.5H26.3889C27.214 1.5 28.0053 1.82778 28.5888 2.41122C29.1722 2.99467 29.5 3.78599 29.5 4.61111V13.9444" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M1.5 4.61133L15.5 13.9447L29.5 4.61133" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M20.168 23.2781L23.2791 26.3892L29.5013 20.167" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="msg__title">Письмо отправлено!</div>
+                </div>
                 <div class="msg__text">Ответ будет направлен на указанный email в течение рабочего дня. Если письмо не пришло, проверьте папку «Спам».</div>
               </div>
             </div>
 
             <div class="msg msg--error">
               <div class="msg__body">
-                <span class="msg__icon">
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.2991 1.5L1.5 21.2991" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M1.50167 1.5L21.3008 21.2991" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <div class="msg__title">Ошибка при отправке формы</div>
+                <div class="msg__top">
+                  <span class="msg__icon">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.2991 1.5L1.5 21.2991" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M1.50167 1.5L21.3008 21.2991" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="msg__title">Ошибка при отправке формы</div>
+                </div>
                 <div class="msg__text">Пожалуйста, проверьте правильность заполнения полей. Поля «Email» и «Телефон» должны быть указаны в корректном формате.</div>
               </div>
             </div>
 
             <div class="msg msg--error">
               <div class="msg__body">
-                <span class="msg__icon">
-                  <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5 10.3652V15.9657" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M13.2084 2.79261L1.85912 21.7417C1.62516 22.1469 1.50135 22.6062 1.50001 23.0741C1.49867 23.542 1.61985 24.002 1.85149 24.4085C2.08313 24.815 2.41716 25.1538 2.82036 25.3912C3.22355 25.6285 3.68187 25.7562 4.14971 25.7614H26.8511C27.3187 25.756 27.7768 25.6284 28.1798 25.3911C28.5828 25.1538 28.9167 24.8152 29.1483 24.4089C29.3799 24.0026 29.5012 23.5428 29.5 23.0751C29.4988 22.6075 29.3753 22.1482 29.1417 21.7431L17.7924 2.79121C17.5536 2.39709 17.2172 2.07119 16.8157 1.84501C16.4142 1.61883 15.9612 1.5 15.5004 1.5C15.0396 1.5 14.5866 1.61883 14.1851 1.84501C13.7836 2.07119 13.4472 2.39709 13.2084 2.79121V2.79261Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.5 20.166H15.514" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <div class="msg__title">Файл не прикреплен</div>
+                <div class="msg__top">
+                  <span class="msg__icon">
+                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.5 10.3652V15.9657" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.2084 2.79261L1.85912 21.7417C1.62516 22.1469 1.50135 22.6062 1.50001 23.0741C1.49867 23.542 1.61985 24.002 1.85149 24.4085C2.08313 24.815 2.41716 25.1538 2.82036 25.3912C3.22355 25.6285 3.68187 25.7562 4.14971 25.7614H26.8511C27.3187 25.756 27.7768 25.6284 28.1798 25.3911C28.5828 25.1538 28.9167 24.8152 29.1483 24.4089C29.3799 24.0026 29.5012 23.5428 29.5 23.0751C29.4988 22.6075 29.3753 22.1482 29.1417 21.7431L17.7924 2.79121C17.5536 2.39709 17.2172 2.07119 16.8157 1.84501C16.4142 1.61883 15.9612 1.5 15.5004 1.5C15.0396 1.5 14.5866 1.61883 14.1851 1.84501C13.7836 2.07119 13.4472 2.39709 13.2084 2.79121V2.79261Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M15.5 20.166H15.514" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="msg__title">Файл не прикреплен</div>
+                </div>
                 <div class="msg__text">Размер файла превысил 10 МБ. Пожалуйста, загрузите файл меньшего размера или отправьте его отдельно на почту <a href="mailto:smarts69@mail.ru" class="feedback__mail">smarts69@mail.ru</a>.</div>
               </div>
             </div>
 
             <div class="msg msg--info">
               <div class="msg__body">
-                <span class="msg__icon">
-                  <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5 1.5C26.7 1.5 29.5 4.3 29.5 15.5C29.5 26.7 26.7 29.5 15.5 29.5C4.3 29.5 1.5 26.7 1.5 15.5C1.5 4.3 4.3 1.5 15.5 1.5Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.5 9.27734V15.4996" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.5 21.7227H15.5156" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <div class="msg__title">Информационное сообщение</div>
+                <div class="msg__top">
+                  <span class="msg__icon">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.5 1.5C26.7 1.5 29.5 4.3 29.5 15.5C29.5 26.7 26.7 29.5 15.5 29.5C4.3 29.5 1.5 26.7 1.5 15.5C1.5 4.3 4.3 1.5 15.5 1.5Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M15.5 9.27734V15.4996" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M15.5 21.7227H15.5156" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="msg__title">Информационное сообщение</div>
+                </div>
                 <div class="msg__text">В настоящее время мы обрабатываем заявки в течение 2–3 часов. Если ваш вопрос срочный, позвоните по телефону <a href="tel:+7482232010" class="feedback__phone"><b>8 (4822) 32-20-10</b></a>.</div>
               </div>
             </div>
 
             <div class="msg msg--warning">
               <div class="msg__body">
-                <span class="msg__icon">
-                  <svg width="31" height="35" viewBox="0 0 31 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5C12 4.07174 12.3687 3.1815 13.0251 2.52513C13.6815 1.86875 14.5717 1.5 15.5 1.5C16.4283 1.5 17.3185 1.86875 17.9749 2.52513C18.6313 3.1815 19 4.07174 19 5C21.0097 5.9503 22.723 7.42957 23.9561 9.27927C25.1892 11.129 25.8958 13.2794 26 15.5V20.75C26.1317 21.838 26.517 22.8799 27.1249 23.7917C27.7328 24.7036 28.5464 25.46 29.5 26H1.5C2.45364 25.46 3.26717 24.7036 3.87508 23.7917C4.48299 22.8799 4.8683 21.838 5 20.75V15.5C5.10423 13.2794 5.81078 11.129 7.04391 9.27927C8.27705 7.42957 9.99028 5.9503 12 5Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M10.25 26V27.75C10.25 29.1424 10.8031 30.4777 11.7877 31.4623C12.7723 32.4469 14.1076 33 15.5 33C16.8924 33 18.2277 32.4469 19.2123 31.4623C20.1969 30.4777 20.75 29.1424 20.75 27.75V26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <div class="msg__title">Внимание!</div>
+                <div class="msg__top">
+                  <span class="msg__icon">
+                    <svg width="31" height="35" viewBox="0 0 31 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 5C12 4.07174 12.3687 3.1815 13.0251 2.52513C13.6815 1.86875 14.5717 1.5 15.5 1.5C16.4283 1.5 17.3185 1.86875 17.9749 2.52513C18.6313 3.1815 19 4.07174 19 5C21.0097 5.9503 22.723 7.42957 23.9561 9.27927C25.1892 11.129 25.8958 13.2794 26 15.5V20.75C26.1317 21.838 26.517 22.8799 27.1249 23.7917C27.7328 24.7036 28.5464 25.46 29.5 26H1.5C2.45364 25.46 3.26717 24.7036 3.87508 23.7917C4.48299 22.8799 4.8683 21.838 5 20.75V15.5C5.10423 13.2794 5.81078 11.129 7.04391 9.27927C8.27705 7.42957 9.99028 5.9503 12 5Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M10.25 26V27.75C10.25 29.1424 10.8031 30.4777 11.7877 31.4623C12.7723 32.4469 14.1076 33 15.5 33C16.8924 33 18.2277 32.4469 19.2123 31.4623C20.1969 30.4777 20.75 29.1424 20.75 27.75V26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="msg__title">Внимание!</div>
+                </div>
                 <div class="msg__text">Срок действия коммерческого предложения истекает через 3 дня. Пожалуйста, подтвердите намерения или запросите продление.</div>
               </div>
             </div>
