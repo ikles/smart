@@ -2204,6 +2204,19 @@ textarea:focus {
 .contacts-map__map {
   height: 580px;
   overflow: hidden;
+  position: relative;
+  &:before {
+    @media (max-width : 640px) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 30px);
+    height: 100%;
+    z-index: 4;    
+    }
+  }  
 }
 
 
@@ -3896,6 +3909,7 @@ textarea:focus {
   opacity: 0;
   visibility: hidden;  
   transition: 0.33s;
+  z-index: 20;
   @media (max-width : 640px) {
     padding-top: 20px;
     padding-bottom: 30px;

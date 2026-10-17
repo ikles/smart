@@ -2050,7 +2050,18 @@ textarea:focus {
 
 .contacts-map__map {
   height: 580px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  @media (max-width: 640px) {
+    .contacts-map__map:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(100% - 30px);
+      height: 100%;
+      z-index: 4; } }
 
 .ymaps-layers-pane {
   -webkit-filter: grayscale(100%);
@@ -3377,7 +3388,8 @@ textarea:focus {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  transition: 0.33s; }
+  transition: 0.33s;
+  z-index: 20; }
   @media (max-width: 640px) {
     .cookies {
       padding-top: 20px;
@@ -3480,9 +3492,13 @@ textarea:focus {
   .hero__row h1, .hero__row .h1 {
     font-size: 60px; }
   .geo__row {
+    zoom: 0.8; }
+  .wrapper {
     zoom: 0.8; } }
 
 @media (max-width: 1199px) {
+  .wrapper {
+    zoom: unset; }
   .burger-w {
     display: block;
     background-color: #52BBB5;
@@ -3739,7 +3755,7 @@ textarea:focus {
   .wu__grid {
     grid-template-columns: repeat(2, 1fr); }
   .geo__row {
-    zoom: 1;
+    zoom: unset;
     display: flex;
     flex-direction: column; } }
 

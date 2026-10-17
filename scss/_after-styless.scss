@@ -39,9 +39,15 @@
   .geo__row {  
     zoom: 0.8;
   }
+  .wrapper {
+    zoom: 0.8;
+  } 
 }//1630
 
 @media (max-width: 1199px) {
+  .wrapper {
+    zoom: unset;
+  } 
   .burger-w {
     display: block;
     background-color: #52BBB5;
@@ -388,7 +394,7 @@
     
   }
   .geo__row {  
-    zoom: 1;
+    zoom: unset;
     display: flex;  
     flex-direction: column;
   }
