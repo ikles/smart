@@ -3466,6 +3466,10 @@ textarea:focus {
 [data-aos=fade-up-2] {
   transform: translate3d(0, 50px, 0); }
 
+@media (max-width: 1920px) {
+  .wrapper {
+    zoom: 0.8; } }
+
 @media (max-width: 1630px) {
   .cycle-card {
     padding: 40px; }
@@ -3492,8 +3496,6 @@ textarea:focus {
   .hero__row h1, .hero__row .h1 {
     font-size: 60px; }
   .geo__row {
-    zoom: 0.8; }
-  .wrapper {
     zoom: 0.8; } }
 
 @media (max-width: 1199px) {

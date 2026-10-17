@@ -1,3 +1,8 @@
+@media (max-width : 1920px) {
+  .wrapper {
+    zoom: 0.8
+  }
+}
 @media (max-width : 1630px) {
   .cycle-card {
     padding: 40px;
@@ -39,9 +44,7 @@
   .geo__row {  
     zoom: 0.8;
   }
-  .wrapper {
-    zoom: 0.8;
-  } 
+  
 }//1630
 
 @media (max-width: 1199px) {
@@ -397,8 +400,7 @@
     zoom: unset;
     display: flex;  
     flex-direction: column;
-  }
-  
+  }  
 }//1199
 
 
