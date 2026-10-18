@@ -395,43 +395,6 @@ imgWrapper.innerHTML = file.name;
 
 
 
-  setTimeout(function() {
-    $('.counter').each(function() {
-      var $this = $(this);
-      var target = parseInt($this.data('target'));
-      var formatted = $this.data('formatted') === true;
-      var duration = 3000; // длительность анимации в мс
-      var startTime = null;
-
-      function animate(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var progress = Math.min((timestamp - startTime) / duration, 1);
-        
-        // easeOutQuad для более плавного замедления в конце
-        var eased = 1 - Math.pow(1 - progress, 2);
-        var current = Math.floor(eased * target);
-
-        if (formatted) {
-          $this.text(current.toLocaleString('ru-RU').replace(/,/g, ' '));
-        } else {
-          $this.text(current);
-        }
-
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        } else {
-          if (formatted) {
-            $this.text(target.toLocaleString('ru-RU').replace(/,/g, ' '));
-          } else {
-            $this.text(target);
-          }
-        }
-      }
-
-      requestAnimationFrame(animate);
-    });
-  }, 500);
-  
 
   $(function () {
     var $header = $('.header');
@@ -454,5 +417,87 @@ imgWrapper.innerHTML = file.name;
         lastScrollTop = scrollTop;
       });
   });
+
+
+
+  const $heroCounts = $('.hero__conuts');
+
+  if ($heroCounts.length === 0) return;
+
+  // --- 1. Отслеживание появления в области видимости ---
+  function checkVisibility() {
+    const windowTop = $(window).scrollTop();
+    const windowBottom = windowTop + $(window).height();
+    const elemTop = $heroCounts.offset().top;
+    const elemBottom = elemTop + $heroCounts.outerHeight();
+
+    if (elemBottom >= windowTop && elemTop <= windowBottom) {
+      // Запускаем анимацию именно у этого родителя
+      $heroCounts.each(function() {
+        const $parent = $(this);
+
+        // Защита от повторного запуска
+        if ($parent.hasClass('show')) return;
+
+        $parent.addClass('show');
+        startCounters($parent);
+      });
+
+      $(window).off('scroll resize', checkVisibility);
+    }
+  }
+
+  // --- 2. Анимация счётчиков внутри конкретного родителя ---
+  function startCounters($parent) {
+    // Небольшая задержка как в оригинале (можно убрать)
+    setTimeout(function() {
+      $parent.find('.counter').each(function() {
+        const $this = $(this);
+        const target = parseInt($this.data('target'), 10) || 0;
+        const formatted = $this.data('formatted') === true;
+        const duration = 3000;
+        let startTime = null;
+
+        function animate(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+
+          // easeOutQuad
+          const eased = 1 - Math.pow(1 - progress, 2);
+          const current = Math.floor(eased * target);
+
+          if (formatted) {
+            $this.text(current.toLocaleString('ru-RU').replace(/,/g, ' '));
+          } else {
+            $this.text(current);
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            $this.text(
+              formatted
+                ? target.toLocaleString('ru-RU').replace(/,/g, ' ')
+                : target
+            );
+          }
+        }
+
+        requestAnimationFrame(animate);
+      });
+    }, 500);
+  }
+
+  // --- 3. Проверка при загрузке и подписка на события ---
+  checkVisibility();
+  $(window).on('scroll resize', checkVisibility);
+
+
+
+
+
+
+
+
 }); //ready
 
