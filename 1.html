@@ -19,283 +19,287 @@
     @@include('var/_header.html')    
     <main class="main">
       <div class="hero">
-        <img class="hero__img" src="./img/exper.jpg" alt="">
-        <div class="hero__row">
-          <div class="contain">
-            <div class="h1" data-aos-easing="ease-out-back" data-aos="fade-up-2" data-aos-duration="800" data-aos-delay="00">Опыт, <br> которому доверяют</div>
-            <p class="hero__subtitle">Смарт Строй — надёжная строительная компания, работающая с 2014 года. Мы выполняем полный цикл строительно-монтажных
-            работ «под ключ». Основатели компании имеют более 25 лет опыта в сфере строительства.</p>            
-            <div class="hero__conuts">
-              <div>
-                <p class="counter" data-target="12">0</p>
-                <span>лет на рынке</span>
-              </div>
-              <div>
-                <p class="counter" data-target="100">0</p>
-                <span>специалистов</span>
-              </div>
-              <div>
-                <p class="counter" data-target="30">0</p>
-                <span>проектов</span>
-              </div>
-              <div>
-                <p class="counter" data-target="200000" data-formatted="true">0</p>
-                <span>м² построено</span>
+        <video autoplay loop muted playsinline poster="./img/exper.jpg" class="bg-video">
+          <source src="./video/vid1.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <!-- <img class="hero__img" src="./img/exper.jpg" alt=""> -->
+          <div class="hero__row">
+            <div class="contain">
+              <div class="h1" data-aos-easing="ease-out-back" data-aos="fade-up-2" data-aos-duration="800" data-aos-delay="00">Опыт, <br> которому доверяют</div>
+              <p class="hero__subtitle">Смарт Строй — надёжная строительная компания, работающая с 2014 года. Мы выполняем полный цикл строительно-монтажных
+              работ «под ключ». Основатели компании имеют более 25 лет опыта в сфере строительства.</p>            
+              <div class="hero__conuts">
+                <div>
+                  <p class="counter" data-target="12">0</p>
+                  <span>лет на рынке</span>
+                </div>
+                <div>
+                  <p class="counter" data-target="100">0</p>
+                  <span>специалистов</span>
+                </div>
+                <div>
+                  <p class="counter" data-target="30">0</p>
+                  <span>проектов</span>
+                </div>
+                <div>
+                  <p class="counter" data-target="200000" data-formatted="true">0</p>
+                  <span>м² построено</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <section class="s-oservices">
+          <div class="contain">
+            <h2>Наши услуги</h2>
+            <div class="subtitle">Полный цикл строительства промышленных объектов — от проекта до ввода в эксплуатацию</div>
+            <div class="cycle__grid cycle__grid--index">
+              @@include('var/_cycle-card-no-list.html',{
+                "cls":"",
+                "img":"./img/cycle-card__icon-1.svg",
+                "title":"Генеральный подряд",
+                "txt":"Полная ответственность за организацию и выполнение строительных работ, координация всех участников проекта, соблюдение сроков и бюджета."
+              })
+
+              @@include('var/_cycle-card-no-list.html',{
+                "cls":"",
+                "img":"./img/cycle-card__icon-2.svg",
+                "title":"Строительство объектов",
+                "txt":"Выполняем строительство производственных, промышленных, коммерческих и спортивных объектов любой сложности.",
+                "list":""
+              })
+              @@include('var/_cycle-card-no-list.html',{
+                "cls":"",
+                "img":"./img/cycle-card__icon-3.svg",
+                "title":"Реконструкция",
+                "txt":"Обновление и модернизация зданий с усилением несущих  конструкций, адаптацией помещений под новые функции и улучшением  эксплуатационных характеристик.",
+                "list":""
+              })
+              @@include('var/_cycle-card-no-list.html',{
+                "cls":"",
+                "img":"./img/cycle-card__icon-4.svg",
+                "title":"Капитальный ремонт",
+                "txt":"Проводим капитальный ремонт и отделочные работы для объектов промышленного и коммерческого назначения.",
+                "list":""
+              })
+              @@include('var/_cycle-card-no-list.html',{
+                "cls":"",
+                "img":"./img/cycle-card__icon-5.svg",
+                "title":"Проектирование",
+                "txt":"Разработка проектной и рабочей документации для объектов различного назначения с учётом действующих нормативов и стандартов.",
+                "list":""
+              })
+            </div>
+          </div>
+        </section>
+
+
+        <div class="s-general-contract">
+          <div class="gc__inner">
+            <div class="gc__media">
+              <img src="./img/gc-photo.jpg" alt="">
+            </div>
+            <div class="gc__body">
+              <div class="cvss-corner-l"></div>
+              <div class="cvss-corner-r"></div>
+              <h2>Генеральный подряд</h2>
+              <p class="subtitle">Предлагаем полный спектр строительных услуг, обеспечивая реализацию проектов различной сложности от идеи до сдачи объекта «под ключ».</p>
+              <ul class="gc__list">
+                <li>                
+                  Строительство производственных зданий
+                </li>
+                <li>                
+                  Строительство промышленных площадок
+                </li>
+                <li>                
+                  Строительство складских комплексов
+                </li>
+                <li>                
+                  Строительство заводов
+                </li>
+                <li>                
+                  Строительство коммерческих зданий
+                </li>
+                <li>                
+                  Строительство административно-общественных зданий
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <section class="s-why-us">
+          <div class="contain">
+            <div class="wu__head">
+              <div class="wu__title">Почему выбирают нас</div>
+              <p class="wu__lead">Ключевые преимущества работы со СмартСтрой</p>
+            </div>
+            <div class="wu__grid">
+              <div class="wu__card">
+                <div class="wu__icon"><img src="img/wu_icon-1.svg" alt=""></div>
+                <div class="wu__txt">Сопровождение объекта до ввода в эксплуатацию</div>
+              </div>
+              <div class="wu__card">
+                <div class="wu__icon"><img src="img/wu_icon-2.svg" alt=""></div>
+                <div class="wu__txt">Собственные бригады строителей, инженерно-технического персонала</div>
+              </div>
+              <div class="wu__card">
+                <div class="wu__icon"><img src="img/wu_icon-3.svg" alt=""></div>
+                <div class="wu__txt">Многолетний опыт работы</div>
+              </div>
+              <div class="wu__card">
+                <div class="wu__icon"><img src="img/wu_icon-4.svg" alt=""></div>
+                <div class="wu__txt">Реализация строительных проектов различного назначения</div>
+              </div>
+              <div class="wu__card">
+                <div class="wu__icon"><img src="img/wu_icon-5.svg" alt=""></div>
+                <div class="wu__txt">Эффективное строительство</div>
+              </div>
+              <div class="wu__card">
+                <div class="wu__icon"><img src="img/wu_icon-6.svg" alt=""></div>
+                <div class="wu__txt">Собственный парк строительной техники</div>
+              </div>
+            </div>        
+          </section>
+
+
+
+          <section class="projects">
+            <div class="contain">
+              <div class="projects__row">
+                <div class="projects__left">
+                  <h2>Наши проекты</h2>
+                  <p class="subtitle">За время нашей работы мы реализовали ряд масштабных проектов. Каждый из проектов был реализован в срок, соблюдением всех требований заказчика и технических регламентов.</p>
+
+                  <div class="projects__ctrls">
+                    <button type="button" class="projects__ctrl-prev">
+                      <span class="projects__arrow projects__arrow--left"></span>
+                    </button>
+
+                    <span class="projects__count">
+                      <b class="projects__current">1</b> <span class="projects__total">4</span>
+                    </span>
+
+                    <button type="button" class="projects__ctrl-next">
+                      <span class="projects__arrow projects__arrow--right"></span>
+                    </button>
+                  </div>
+
+                  <a data-da=",.projects__right-btn,991,10" href="#" class="btn projects__btn">Портфолио</a>
+                </div>
+
+                <div class="projects__right">
+                  <div class="projects__slider">            
+                    <div class="projects__slide">
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-1.jpg",
+                        "title":"Реконструкция промышленного здания под современный торговый центр.",
+                        "txt":"Реконструкция промышленного здания под современный торгово-офисный центр.",
+                        "lbl": "г. Тверь"
+                      })
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-2.jpg",
+                        "title":"Фитнес-клуб «F3 Формула»",
+                        "txt":"Строительство здания с тренажёрными залами, бассейном и SPA-зоной.",
+                        "lbl": "г. Тверь"
+                      })
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-3.jpg",
+                        "title":"Промтехнопарк «КСК»",
+                        "txt":"Строительство здания Управляющей компании «КСК».",
+                        "lbl": "г. Тверь"
+                      })
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-4.jpg",
+                        "title":"Торговый комплекс ОАО «Универсал»",
+                        "txt":"Строительство объекта вдоль федеральной трассы М-10.",
+                        "lbl": "Калининский район"
+                      })
+                    </div>
+                    <div class="projects__slide">
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-1.jpg",
+                        "title":"Реконструкция промышленного здания под современный торговый центр.",
+                        "txt":"Реконструкция промышленного здания под современный торгово-офисный центр.",
+                        "lbl": "г. Тверь"
+                      })
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-2.jpg",
+                        "title":"Фитнес-клуб «F3 Формула»",
+                        "txt":"Строительство здания с тренажёрными залами, бассейном и SPA-зоной.",
+                        "lbl": "г. Тверь"
+                      })
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-3.jpg",
+                        "title":"Промтехнопарк «КСК»",
+                        "txt":"Строительство здания Управляющей компании «КСК».",
+                        "lbl": "г. Тверь"
+                      })
+                      @@include('var/_project-card-slider.html',{
+                        "img":"img/project-tc-4.jpg",
+                        "title":"Торговый комплекс ОАО «Универсал»",
+                        "txt":"Строительство объекта вдоль федеральной трассы М-10.",
+                        "lbl": "Калининский район"
+                      })
+                    </div>
+                  </div>
+                  <div class="projects__right-btn"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="geo">
+            <div class="contain">
+              <div class="geo__row">
+                <div class="geo__l">
+                  <h2>География проектов</h2>
+                  <p class="subtitle">Работаем в Тверской области и соседних регионах Центральной России</p>
+                  <div class="geo__regions">
+                    <div class="geo__regions-title">Регионы присутствия</div>
+                    <div class="geo__actions">
+                      <button>Тверская область</button>
+                      <button>Псковская область</button>
+                      <button>Смоленская область</button>
+                      <button>Тульская область</button>
+                      <button>Московская область</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="geo__r">
+                  <div class="geo__map">
+                    <img src="img/region-map.jpg" alt="">
+                    <span class="geo__dot geo__dot--1">
+                      <img src="./img/Pin-Mark.svg" alt="">
+                      <span>Тверь</span>
+                    </span>
+                    <span class="geo__dot geo__dot--2">
+                      <img src="./img/Pin-Mark.svg" alt="">
+                      <span>Псков</span>
+                    </span>
+                    <span class="geo__dot geo__dot--3">
+                      <img src="./img/Pin-Mark.svg" alt="">
+                      <span>Смоленск</span>
+                    </span>
+                    <span class="geo__dot geo__dot--4">
+                      <img src="./img/Pin-Mark.svg" alt="">
+                      <span>Тула</span>
+                    </span>
+                    <span class="geo__dot geo__dot--5">
+                      <img src="./img/Pin-Mark.svg" alt="">
+                      <span>Москва</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          @@include('var/_s-site-cta.html')
+        </main>
+        @@include('var/_footer.html')    
       </div>
-      <section class="s-oservices">
-        <div class="contain">
-          <h2>Наши услуги</h2>
-          <div class="subtitle">Полный цикл строительства промышленных объектов — от проекта до ввода в эксплуатацию</div>
-          <div class="cycle__grid cycle__grid--index">
-            @@include('var/_cycle-card-no-list.html',{
-              "cls":"",
-              "img":"./img/cycle-card__icon-1.svg",
-              "title":"Генеральный подряд",
-              "txt":"Полная ответственность за организацию и выполнение строительных работ, координация всех участников проекта, соблюдение сроков и бюджета."
-            })
-
-            @@include('var/_cycle-card-no-list.html',{
-              "cls":"",
-              "img":"./img/cycle-card__icon-2.svg",
-              "title":"Строительство объектов",
-              "txt":"Выполняем строительство производственных, промышленных, коммерческих и спортивных объектов любой сложности.",
-              "list":""
-            })
-            @@include('var/_cycle-card-no-list.html',{
-              "cls":"",
-              "img":"./img/cycle-card__icon-3.svg",
-              "title":"Реконструкция",
-              "txt":"Обновление и модернизация зданий с усилением несущих  конструкций, адаптацией помещений под новые функции и улучшением  эксплуатационных характеристик.",
-              "list":""
-            })
-            @@include('var/_cycle-card-no-list.html',{
-              "cls":"",
-              "img":"./img/cycle-card__icon-4.svg",
-              "title":"Капитальный ремонт",
-              "txt":"Проводим капитальный ремонт и отделочные работы для объектов промышленного и коммерческого назначения.",
-              "list":""
-            })
-            @@include('var/_cycle-card-no-list.html',{
-              "cls":"",
-              "img":"./img/cycle-card__icon-5.svg",
-              "title":"Проектирование",
-              "txt":"Разработка проектной и рабочей документации для объектов различного назначения с учётом действующих нормативов и стандартов.",
-              "list":""
-            })
-          </div>
-        </div>
-      </section>
-
-
-      <div class="s-general-contract">
-        <div class="gc__inner">
-          <div class="gc__media">
-            <img src="./img/gc-photo.jpg" alt="">
-          </div>
-          <div class="gc__body">
-            <div class="cvss-corner-l"></div>
-            <div class="cvss-corner-r"></div>
-            <h2>Генеральный подряд</h2>
-            <p class="subtitle">Предлагаем полный спектр строительных услуг, обеспечивая реализацию проектов различной сложности от идеи до сдачи объекта «под ключ».</p>
-            <ul class="gc__list">
-              <li>                
-                Строительство производственных зданий
-              </li>
-              <li>                
-                Строительство промышленных площадок
-              </li>
-              <li>                
-                Строительство складских комплексов
-              </li>
-              <li>                
-                Строительство заводов
-              </li>
-              <li>                
-                Строительство коммерческих зданий
-              </li>
-              <li>                
-                Строительство административно-общественных зданий
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <section class="s-why-us">
-        <div class="contain">
-          <div class="wu__head">
-            <div class="wu__title">Почему выбирают нас</div>
-            <p class="wu__lead">Ключевые преимущества работы со СмартСтрой</p>
-          </div>
-          <div class="wu__grid">
-            <div class="wu__card">
-              <div class="wu__icon"><img src="img/wu_icon-1.svg" alt=""></div>
-              <div class="wu__txt">Сопровождение объекта до ввода в эксплуатацию</div>
-            </div>
-            <div class="wu__card">
-              <div class="wu__icon"><img src="img/wu_icon-2.svg" alt=""></div>
-              <div class="wu__txt">Собственные бригады строителей, инженерно-технического персонала</div>
-            </div>
-            <div class="wu__card">
-              <div class="wu__icon"><img src="img/wu_icon-3.svg" alt=""></div>
-              <div class="wu__txt">Многолетний опыт работы</div>
-            </div>
-            <div class="wu__card">
-              <div class="wu__icon"><img src="img/wu_icon-4.svg" alt=""></div>
-              <div class="wu__txt">Реализация строительных проектов различного назначения</div>
-            </div>
-            <div class="wu__card">
-              <div class="wu__icon"><img src="img/wu_icon-5.svg" alt=""></div>
-              <div class="wu__txt">Эффективное строительство</div>
-            </div>
-            <div class="wu__card">
-              <div class="wu__icon"><img src="img/wu_icon-6.svg" alt=""></div>
-              <div class="wu__txt">Собственный парк строительной техники</div>
-            </div>
-          </div>        
-        </section>
-
-
-
-        <section class="projects">
-          <div class="contain">
-            <div class="projects__row">
-              <div class="projects__left">
-                <h2>Наши проекты</h2>
-                <p class="subtitle">За время нашей работы мы реализовали ряд масштабных проектов. Каждый из проектов был реализован в срок, соблюдением всех требований заказчика и технических регламентов.</p>
-
-                <div class="projects__ctrls">
-                  <button type="button" class="projects__ctrl-prev">
-                    <span class="projects__arrow projects__arrow--left"></span>
-                  </button>
-
-                  <span class="projects__count">
-                    <b class="projects__current">1</b> <span class="projects__total">4</span>
-                  </span>
-
-                  <button type="button" class="projects__ctrl-next">
-                    <span class="projects__arrow projects__arrow--right"></span>
-                  </button>
-                </div>
-
-                <a data-da=",.projects__right-btn,991,10" href="#" class="btn projects__btn">Портфолио</a>
-              </div>
-
-              <div class="projects__right">
-                <div class="projects__slider">            
-                  <div class="projects__slide">
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-1.jpg",
-                      "title":"Реконструкция промышленного здания под современный торговый центр.",
-                      "txt":"Реконструкция промышленного здания под современный торгово-офисный центр.",
-                      "lbl": "г. Тверь"
-                    })
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-2.jpg",
-                      "title":"Фитнес-клуб «F3 Формула»",
-                      "txt":"Строительство здания с тренажёрными залами, бассейном и SPA-зоной.",
-                      "lbl": "г. Тверь"
-                    })
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-3.jpg",
-                      "title":"Промтехнопарк «КСК»",
-                      "txt":"Строительство здания Управляющей компании «КСК».",
-                      "lbl": "г. Тверь"
-                    })
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-4.jpg",
-                      "title":"Торговый комплекс ОАО «Универсал»",
-                      "txt":"Строительство объекта вдоль федеральной трассы М-10.",
-                      "lbl": "Калининский район"
-                    })
-                  </div>
-                  <div class="projects__slide">
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-1.jpg",
-                      "title":"Реконструкция промышленного здания под современный торговый центр.",
-                      "txt":"Реконструкция промышленного здания под современный торгово-офисный центр.",
-                      "lbl": "г. Тверь"
-                    })
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-2.jpg",
-                      "title":"Фитнес-клуб «F3 Формула»",
-                      "txt":"Строительство здания с тренажёрными залами, бассейном и SPA-зоной.",
-                      "lbl": "г. Тверь"
-                    })
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-3.jpg",
-                      "title":"Промтехнопарк «КСК»",
-                      "txt":"Строительство здания Управляющей компании «КСК».",
-                      "lbl": "г. Тверь"
-                    })
-                    @@include('var/_project-card-slider.html',{
-                      "img":"img/project-tc-4.jpg",
-                      "title":"Торговый комплекс ОАО «Универсал»",
-                      "txt":"Строительство объекта вдоль федеральной трассы М-10.",
-                      "lbl": "Калининский район"
-                    })
-                  </div>
-                </div>
-                <div class="projects__right-btn"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="geo">
-          <div class="contain">
-            <div class="geo__row">
-              <div class="geo__l">
-                <h2>География проектов</h2>
-                <p class="subtitle">Работаем в Тверской области и соседних регионах Центральной России</p>
-                <div class="geo__regions">
-                  <div class="geo__regions-title">Регионы присутствия</div>
-                  <div class="geo__actions">
-                    <button>Тверская область</button>
-                    <button>Псковская область</button>
-                    <button>Смоленская область</button>
-                    <button>Тульская область</button>
-                    <button>Московская область</button>
-                  </div>
-                </div>
-              </div>
-              <div class="geo__r">
-                <div class="geo__map">
-                  <img src="img/region-map.jpg" alt="">
-                  <span class="geo__dot geo__dot--1">
-                    <img src="./img/Pin-Mark.svg" alt="">
-                    <span>Тверь</span>
-                  </span>
-                  <span class="geo__dot geo__dot--2">
-                    <img src="./img/Pin-Mark.svg" alt="">
-                    <span>Псков</span>
-                  </span>
-                  <span class="geo__dot geo__dot--3">
-                    <img src="./img/Pin-Mark.svg" alt="">
-                    <span>Смоленск</span>
-                  </span>
-                  <span class="geo__dot geo__dot--4">
-                    <img src="./img/Pin-Mark.svg" alt="">
-                    <span>Тула</span>
-                  </span>
-                  <span class="geo__dot geo__dot--5">
-                    <img src="./img/Pin-Mark.svg" alt="">
-                    <span>Москва</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        @@include('var/_s-site-cta.html')
-      </main>
-      @@include('var/_footer.html')    
-    </div>
 <!--wrapper-->
 
 @@include('var/_scripts.html')

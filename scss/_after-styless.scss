@@ -1,6 +1,6 @@
 @media (max-width : 1920px) {
   .wrapper {
-    zoom: 0.8
+    
   }
 }
 @media (max-width : 1630px) {
@@ -401,6 +401,13 @@
     display: flex;  
     flex-direction: column;
   }  
+  .gc__media > img {
+    position: static;
+  }
+  .gc__media,
+  .gc__body {
+    width: 100%;
+  }
 }//1199
 
 
