@@ -2430,22 +2430,6 @@ textarea:focus {
   text-align: center;
   color: #fff; }
 
-.timeline {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 160px; }
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 540px 24px 600px;
-  align-items: center;
-  gap: 103px; }
-  .timeline-item:last-child .timeline-dot:after {
-    display: none; }
-  .timeline-item:first-child .timeline-dot:after {
-    background-color: #52BBB5; }
-
 .timeline-year {
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -2472,17 +2456,67 @@ textarea:focus {
   text-align: right;
   color: #1a1b26; }
 
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 160px; }
+  .timeline .timeline-progress-bar {
+    position: absolute;
+    left: 653px;
+    width: 3px;
+    background-color: rgba(26, 44, 69, 0.3);
+    z-index: 0;
+    pointer-events: none;
+    top: calc(340px - 44px);
+    height: calc(100% - 680px + 88px); }
+    @media (max-width: 1630px) {
+      .timeline .timeline-progress-bar {
+        top: calc(215px - 44px);
+        height: calc(100% - 430px + 88px); } }
+  .timeline .timeline-progress-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #52BBB5;
+    transition: height 0.1s linear; }
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 540px 24px 600px;
+  align-items: center;
+  gap: 103px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.33s; }
+  .timeline-item.active {
+    opacity: 1; }
+  .timeline-item:last-child .timeline-dot:after {
+    display: none; }
+  .timeline-item:first-child .timeline-dot.active {
+    background-color: #52BBB5; }
+    .timeline-item:first-child .timeline-dot.active:after {
+      background-color: #52BBB5; }
+
 .timeline-mid {
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .timeline-dot {
   display: inline-flex;
+  flex-shrink: 0;
   width: 24px;
   height: 24px;
+  box-sizing: border-box;
   border-radius: 50%;
-  background-color: rgba(26, 44, 69, 0.3);
   background-color: #bbc0c8;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
   .timeline-dot:before {
     content: "";
     display: block;
@@ -2495,19 +2529,11 @@ textarea:focus {
     border-radius: 100%;
     border: 2px solid rgba(26, 44, 69, 0.3); }
   .timeline-dot:after {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 100%);
-    content: "";
-    display: block;
-    background-color: rgba(26, 44, 69, 0.3);
-    width: 1px;
-    height: 742px; }
+    display: none; }
   .timeline-dot.active {
     background-color: #52BBB5; }
     .timeline-dot.active:before {
-      border-color: #52bbb5; }
+      border-color: #52BBB5; }
 
 .timeline-img-wrap {
   width: 100%;
@@ -2611,27 +2637,48 @@ textarea:focus {
   color: #1a2c45; }
 
 .projects {
-  background: #1a2c45; }
+  background: #1a2c45;
+  position: relative;
+  overflow: hidden; }
+  .projects:before {
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    height: 1024px;
+    background: url("../img/projects-bg2k.png") no-repeat right bottom 60px;
+    width: calc(((100vw - 1600px) / 2) + 500px);
+    background-size: cover; }
+  @media (max-width: 1920px) {
+    .projects {
+      background-image: none; }
+      .projects:before {
+        display: none; } }
   .projects h2,
   .projects .subtitle {
     color: #FFF; }
 
 .projects__row {
   display: flex;
-  gap: 135px;
-  position: relative; }
+  gap: 135px; }
   .projects__row * {
     z-index: 2; }
-  .projects__row:before {
-    z-index: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -230px;
-    left: -170px;
-    width: 1024px;
-    height: 1024px;
-    background: url("../img/projects-bg.png") no-repeat 0 0; }
+  @media (max-width: 1920px) {
+    .projects__row {
+      position: relative; } }
+  @media (max-width: 1920px) {
+    .projects__row:before {
+      z-index: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -230px;
+      left: -170px;
+      width: 1024px;
+      height: 1024px;
+      background: url("../img/projects-bg.png") no-repeat 0 0; } }
 
 .projects__left {
   flex-grow: 1; }
@@ -3781,7 +3828,9 @@ textarea:focus {
     position: static; }
   .gc__media,
   .gc__body {
-    width: 100%; } }
+    width: 100%; }
+  .timeline .timeline-progress-bar {
+    display: none; } }
 
 @media (max-width: 991px) {
   .project-card__img-w {

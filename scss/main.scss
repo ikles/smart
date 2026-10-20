@@ -2695,33 +2695,7 @@ textarea:focus {
 }
 
 
-.timeline {
-  display: flex;
-  flex-direction: column;  
-  position: relative;
-  gap: 160px;
-}
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 540px 24px 600px;
-  align-items: center;  
-  gap: 103px;
-  &:last-child {
-    .timeline-dot {
-      &:after {
-        display: none;
-      }
-    } 
-  }  
-  &:first-child {
-    .timeline-dot {
-      &:after {
-       background-color: #52BBB5; 
-     }
-   } 
- }  
-}
 
 
 .timeline-year {
@@ -2735,7 +2709,6 @@ textarea:focus {
     height: auto;
   }
 }
-
 
 
 .timeline-title {
@@ -2756,21 +2729,89 @@ textarea:focus {
   color: #1a1b26;
 }
 
-.timeline-mid {
-  position: relative;
 
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 160px;
+
+  // Фоновая линия заканчивается у центров крайних точек
+  .timeline-progress-bar {
+    position: absolute;
+    left: 653px;
+    width: 3px;
+    background-color: rgba(26, 44, 69, 0.3);
+    
+    z-index: 0;
+    pointer-events: none;
+    top: calc(340px - 44px);    
+    height: calc(100% - 680px + 88px);
+    @media (max-width : 1630px) {
+    top: calc(215px - 44px);    
+    height: calc(100% - 430px + 88px);    
+    }
+  }
+
+  .timeline-progress-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #52BBB5;
+    transition: height 0.1s linear;
+  }
 }
 
+.timeline-item {
+  display: grid;
+  grid-template-columns: 540px 24px 600px;
+  align-items: center;
+  gap: 103px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;  
+  transition: opacity 0.33s;
+  &.active {
+    opacity: 1;
+  }
+  &:last-child {
+    .timeline-dot:after {
+      display: none;
+    }
+  }
 
+  &:first-child {
+    .timeline-dot.active {
+      background-color: #52BBB5;
+
+      &:after {
+        background-color: #52BBB5;
+      }
+    }
+  }
+}
+
+.timeline-mid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .timeline-dot {
   display: inline-flex;
+  flex-shrink: 0;
   width: 24px;
   height: 24px;
+  box-sizing: border-box;
   border-radius: 50%;
-  background-color: rgba(26, 44, 69, 0.3);
   background-color: #bbc0c8;
   position: relative;
+  z-index: 2;
+
   &:before {
     content: "";
     display: block;
@@ -2779,28 +2820,26 @@ textarea:focus {
     top: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% + 20px);
-    height: calc(100% + 20px);    
-    border-radius: 100%;    
+    height: calc(100% + 20px);
+    border-radius: 100%;
     border: 2px solid rgba(26, 44, 69, 0.3);
   }
+
+  // Линию между точками теперь рисует общий progress-bar
   &:after {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 100%);
-    content: "";
-    display: block;
-    background-color: rgba(26, 44, 69, 0.3);
-    width: 1px;
-    height: 742px;
-  } 
+    display: none;
+  }
+
   &.active {
     background-color: #52BBB5;
+
     &:before {
-      border-color: #52bbb5;
+      border-color: #52BBB5;
     }
-  } 
+  }
 }
+
+
 
 
 .timeline-img-wrap {
@@ -2831,9 +2870,7 @@ textarea:focus {
   }
 }
 
-.timeline-img {
 
-}
 
 
 
@@ -2934,34 +2971,64 @@ textarea:focus {
   color: #1a2c45;
 }
 
-.projects {
+
+
+
+.projects {  
   background: #1a2c45;  
-  h2,
-  .subtitle {
-    color: #FFF;
-  }
-  .contain {
-
-  }
-}
-
-.projects__row {
-  display: flex;  
-  gap: 135px;
-  position: relative;
-  * {
-    z-index: 2;
-  }
-  &:before {
+  position: relative;  
+  overflow: hidden;
+  &:before {    
     z-index: 0;
     content: "";
     display: block;
     position: absolute;
-    bottom: -230px;
-    left: -170px;
-    width: 1024px;
+    bottom: 60px;
+    left: 0;    
     height: 1024px;
-    background: url("../img/projects-bg.png") no-repeat 0 0;
+    background: url("../img/projects-bg2k.png") no-repeat right bottom 60px;
+    width: calc(((100vw - 1600px) / 2) + 500px);    
+    background-size: cover;
+  }  
+  @media (max-width : 1920px) {  
+    background-image: none;
+    &:before {
+      display: none;
+    }
+  }
+  h2,
+  .subtitle {
+    color: #FFF;
+  }
+}
+
+
+
+
+
+
+
+.projects__row {
+  display: flex;  
+  gap: 135px;
+  * {
+    z-index: 2;
+  }
+  @media (max-width : 1920px) {
+    position: relative;    
+  }
+  &:before {
+    @media (max-width : 1920px) {
+      z-index: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -230px;
+      left: -170px;
+      width: 1024px;
+      height: 1024px;
+      background: url("../img/projects-bg.png") no-repeat 0 0;    
+    }
   }  
 }
 

@@ -494,10 +494,48 @@ imgWrapper.innerHTML = file.name;
 
 
 
-
-
-
-
-
 }); //ready
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timeline = document.querySelector(".timeline");
+  const progressLine = timeline?.querySelector(".timeline-progress-line");
+  const items = timeline?.querySelectorAll(".timeline-item");
+
+  if (!timeline || !progressLine || !items.length) return;
+
+  function handleTimelineScroll() {
+    const timelineRect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const startTrigger = windowHeight * 0.65;
+
+    const progress = Math.min(
+      Math.max(
+        ((startTrigger - timelineRect.top) / timelineRect.height) * 100,
+        0
+      ),
+      100
+    );
+
+    progressLine.style.height = `${progress}%`;
+
+    items.forEach((item) => {
+      const itemRect = item.getBoundingClientRect();
+      const dot = item.querySelector(".timeline-dot");
+
+      const isActive = itemRect.top < startTrigger;
+
+      item.classList.toggle("active", isActive);
+      dot?.classList.toggle("active", isActive);
+    });
+  }
+
+  window.addEventListener("scroll", handleTimelineScroll, {
+    passive: true
+  });
+
+  window.addEventListener("resize", handleTimelineScroll);
+
+  handleTimelineScroll();
+});
 
