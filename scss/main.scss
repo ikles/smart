@@ -2735,19 +2735,21 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 160px;
+  gap: 160px;  
+  align-items: flex-end;
 
   // Фоновая линия заканчивается у центров крайних точек
   .timeline-progress-bar {
     position: absolute;
-    left: 653px;
+    /*left: 653px;*/
+    left: 964px;
     width: 3px;
     background-color: rgba(26, 44, 69, 0.3);
     
     z-index: 0;
     pointer-events: none;
-    top: calc(340px - 44px);    
-    height: calc(100% - 680px + 88px);
+    top: calc(300px - 44px);    
+    height: calc(100% - 600px + 88px);
     @media (max-width : 1630px) {
     top: calc(215px - 44px);    
     height: calc(100% - 430px + 88px);    
@@ -2767,7 +2769,7 @@ textarea:focus {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 540px 24px 600px;
+  grid-template-columns: 540px 24px 520px;
   align-items: center;
   gap: 103px;
   position: relative;

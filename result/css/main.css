@@ -2460,16 +2460,18 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 160px; }
+  gap: 160px;
+  align-items: flex-end; }
   .timeline .timeline-progress-bar {
     position: absolute;
-    left: 653px;
+    /*left: 653px;*/
+    left: 964px;
     width: 3px;
     background-color: rgba(26, 44, 69, 0.3);
     z-index: 0;
     pointer-events: none;
-    top: calc(340px - 44px);
-    height: calc(100% - 680px + 88px); }
+    top: calc(300px - 44px);
+    height: calc(100% - 600px + 88px); }
     @media (max-width: 1630px) {
       .timeline .timeline-progress-bar {
         top: calc(215px - 44px);
@@ -2485,7 +2487,7 @@ textarea:focus {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 540px 24px 600px;
+  grid-template-columns: 540px 24px 520px;
   align-items: center;
   gap: 103px;
   position: relative;
@@ -3560,7 +3562,9 @@ textarea:focus {
   .hero__row h1, .hero__row .h1 {
     font-size: 60px; }
   .geo__row {
-    zoom: 0.8; } }
+    zoom: 0.8; }
+  .timeline .timeline-progress-bar {
+    left: 704px; } }
 
 @media (max-width: 1199px) {
   .wrapper {
